@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth bg-[#ECE6DF] text-[#0F3F49]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TESSA LABS — Ingeniería Web, Catálogos WhatsApp & Arquitectura IA</title>
+  <meta name="description" content="TESSA LABS: Estudio de ingeniería web, catálogos e-commerce con checkout directo a WhatsApp y automatizaciones de IA autónomas sin comisiones ni rentas.">
+
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Spline 3D Preload & Network Optimization -->
+  <link rel="preconnect" href="https://prod.spline.design" crossorigin>
+  <link rel="dns-prefetch" href="https://prod.spline.design">
+  <link rel="preload" href="https://prod.spline.design/CTpwTiu6RLbc7HAr/scene.splinecode" as="fetch" crossorigin>
+  <link rel="modulepreload" href="https://unpkg.com/@splinetool/runtime/build/runtime.js">
+
+  <!-- Tailwind Configuration with Editorial Tech Fonts & Concrete / Aquamarine / Burgundy Palette -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            concrete: {
+              DEFAULT: '#ECE6DF',
+              light: '#F7F3EE',
+              card: '#FFFFFF',
+              muted: '#666059',
+              dim: '#9E978F',
+              border: 'rgba(15, 63, 73, 0.12)',
+              dark: '#DDD6CE'
+            },
+            aquamarine: {
+              DEFAULT: '#0F3F49',
+              deep: '#08262C',
+              nav: '#0B3139',
+              card: '#0B3038',
+              elevated: '#17525E',
+              light: '#52A7B5',
+              soft: 'rgba(15, 63, 73, 0.08)'
+            },
+            burgundy: {
+              DEFAULT: '#7F0508',
+              deep: '#520305',
+              hover: '#9E0A0E',
+              tint: '#C43135',
+              soft: 'rgba(127, 5, 8, 0.08)'
+            }
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', '"Syne"', 'sans-serif'],
+            serif: ['"Instrument Serif"', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            tessa: ['"Space Grotesk"', 'sans-serif']
+          },
+          animation: {
+            'marquee': 'marquee 32s linear infinite',
+            'pulse-glow': 'pulseGlow 4s ease-in-out infinite'
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' }
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.4' },
+              '50%': { opacity: '0.8' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Kinetic Smooth Scroll & Scrollbar */
+    html {
+      background-color: #ECE6DF;
+      color: #0F3F49;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #ECE6DF;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0F3F49;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #7F0508;
+    }
+
+    /* Film Grain Noise Texture Overlay */
+    .film-noise {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
+    }
+
+    /* Radial Vignette Mask for 3D Spline Canvas */
+    .spline-vignette {
+      mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 84%);
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 84%);
+    }
+
+    /* 3D Stage Hardware Containment & Mobile Touch Optimization */
+    #splineStage {
+      contain: layout paint;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+    #splineCanvas {
+      touch-action: pan-y;
+      will-change: transform, opacity;
+    }
+
+    /* Suppress any Spline branding / watermark on mobile & desktop */
+    a[href*="spline.design"],
+    #logo,
+    .spline-watermark {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+
+    /* Fluid Typography */
+    .fluid-h1 {
+      font-size: clamp(2rem, 3.5vw + 0.5rem, 3.85rem);
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+    }
+
+    /* Spotlight Card Engine (Adaptive Concrete Architecture) */
+    .bento-spotlight {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(15, 63, 73, 0.12);
+      transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bento-spotlight::before {
+      content: '';
+      position: absolute;
+      top: var(--mouse-y, -1000px);
+      left: var(--mouse-x, -1000px);
+      width: 480px;
+      height: 480px;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(15, 63, 73, 0.08) 0%, rgba(127, 5, 8, 0.04) 40%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .bento-spotlight:hover::before {
+      opacity: 1;
+    }
+    .bento-spotlight:hover {
+      border-color: rgba(15, 63, 73, 0.35);
+      box-shadow: 0 16px 40px -10px rgba(15, 63, 73, 0.08);
+    }
+
+    /* Card Selected State in Catalog */
+    .catalog-card.is-selected {
+      border-color: #7F0508 !important;
+      background: #FFFFFF !important;
+      box-shadow: 0 0 35px -4px rgba(127, 5, 8, 0.25), inset 0 0 0 1px #7F0508;
+    }
+
+    /* Hide scrollbars for Horizontal Slide Deck */
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Magnetic Primary Button */
+    .magnetic-primary {
+      background-color: #0F3F49;
+      color: #ECE6DF;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .magnetic-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -8px rgba(15, 63, 73, 0.35);
+      background-color: #17525E;
+    }
+  </style>
+</head>
+<body class="bg-[#ECE6DF] text-[#0F3F49] font-sans antialiased selection:bg-[#7F0508] selection:text-[#ECE6DF] overflow-x-hidden relative min-h-screen pb-28">
+
+  <!-- Subtle Viewport Noise Overlay -->
+  <div class="fixed inset-0 pointer-events-none film-noise z-50"></div>
+
+  <!-- Cinematic Interstellar Ocean Canvas (Miller's Planet) — Fixed Background Across Entire Page -->
+  <div id="interstellarOceanContainer" class="fixed inset-0 z-0 pointer-events-none overflow-hidden select-none">
+    <!-- Dynamic Ocean Simulator Canvas -->
+    <canvas id="interstellarOceanCanvas" class="w-full h-full block object-cover opacity-70"></canvas>
+    
+    <!-- Atmospheric Gradients: blends the ocean with the Concrete background -->
+    <div class="absolute inset-0 bg-gradient-to-b from-[#ECE6DF]/25 via-transparent to-[#ECE6DF]/75"></div>
+    <div class="absolute inset-0 bg-radial-gradient from-transparent via-[#ECE6DF]/15 to-[#ECE6DF]/60"></div>
+    
+    <!-- Miller's Planet Massive Titan Wave Horizon Silhouette -->
+    <div class="absolute -bottom-6 inset-x-0 h-44 sm:h-56 bg-gradient-to-t from-[#ECE6DF]/70 via-[#ECE6DF]/30 to-transparent pointer-events-none"></div>
+  </div>
+
+  <!-- Ambient Concrete / Aquamarine / Burgundy Depth Accents -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-32 left-1/4 w-[600px] h-[500px] bg-[#0F3F49]/[0.05] rounded-full blur-[150px]"></div>
+    <div class="absolute top-[35%] -right-48 w-[650px] h-[550px] bg-[#7F0508]/[0.04] rounded-full blur-[160px]"></div>
+    <div class="absolute top-[70%] -left-40 w-[600px] h-[500px] bg-[#0F3F49]/[0.04] rounded-full blur-[150px]"></div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 1. FLOATING GLASS PILL NAVBAR -->
+  <!-- ========================================================================= -->
+  <header class="fixed top-3.5 sm:top-5 inset-x-0 z-40 flex justify-center px-4">
+    <nav class="w-full max-w-4xl bg-white/80 backdrop-blur-2xl border border-[#0F3F49]/15 rounded-full px-4 sm:px-6 py-2 flex items-center justify-between shadow-[0_12px_40px_rgba(15,63,73,0.06)] transition-all">
+      
+      <!-- Brand & Emblem (Left Anchor: flex-1 ensures perfect mathematical centering) -->
+      <div class="flex-1 flex items-center justify-start">
+        <a href="#" class="flex items-center gap-2.5 group">
+          <div class="w-8 h-8 rounded-full overflow-hidden border border-[#0F3F49]/20 bg-[#ECE6DF] p-0.5 group-hover:border-[#7F0508] transition-colors shrink-0">
+            <img src="assets/tessa/tessa-emblem-concrete.jpg" alt="TESSA Emblem" class="w-full h-full object-contain">
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-display font-extrabold text-lg tracking-[-0.03em] text-[#0F3F49] group-hover:text-[#7F0508] transition-colors">TESSA</span>
+            <span class="text-[9px] font-mono tracking-widest uppercase bg-[#7F0508]/10 border border-[#7F0508]/25 px-2 py-0.5 rounded-full text-[#7F0508] font-bold">LABS</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navigation Links (Symmetrical spacing, identical hit-areas & centered) -->
+      <div class="hidden md:flex items-center justify-center gap-1 lg:gap-1.5 shrink-0">
+        <a href="#comparativa" class="px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider text-[#0F3F49]/70 hover:text-[#0F3F49] hover:bg-[#0F3F49]/[0.06] transition-all">
+          Arquitectura
+        </a>
+        <a href="#creaciones" class="px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider text-[#0F3F49]/70 hover:text-[#0F3F49] hover:bg-[#0F3F49]/[0.06] transition-all">
+          Creaciones
+        </a>
+        <a href="#catalogo" class="px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider text-[#0F3F49]/70 hover:text-[#0F3F49] hover:bg-[#0F3F49]/[0.06] transition-all">
+          Catálogo
+        </a>
+        <a href="#ia" class="px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider text-[#0F3F49]/70 hover:text-[#0F3F49] hover:bg-[#0F3F49]/[0.06] transition-all">
+          Sistemas IA
+        </a>
+      </div>
+
+      <!-- High-Contrast Pill CTA (Right Anchor: flex-1 balances the left container) -->
+      <div class="flex-1 flex items-center justify-end gap-3">
+        <a href="#catalogo" class="px-4 sm:px-5 py-2 rounded-full bg-[#0F3F49] hover:bg-[#17525E] text-[#ECE6DF] font-sans font-bold text-xs tracking-tight transition-all duration-200 hover:scale-[1.02] shadow-[0_4px_20px_rgba(15,63,73,0.18)] whitespace-nowrap">
+          Cotizar en WhatsApp
+        </a>
+        <button id="navMenuToggle" class="md:hidden p-1.5 text-[#0F3F49] hover:text-[#7F0508]" aria-label="Abrir menú">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileDrawer" class="fixed inset-0 z-50 bg-[#ECE6DF]/98 backdrop-blur-2xl hidden flex-col justify-center items-center px-6 text-center">
+    <button id="closeMobileDrawer" class="absolute top-7 right-7 p-2 rounded-full bg-[#0F3F49]/10 text-[#0F3F49]">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+    <div class="flex flex-col gap-6 text-xl font-display font-bold">
+      <a href="#comparativa" class="drawer-link text-[#0F3F49]/70 hover:text-[#0F3F49] transition-colors">Arquitectura</a>
+      <a href="#creaciones" class="drawer-link text-[#0F3F49]/70 hover:text-[#0F3F49] transition-colors">Creaciones</a>
+      <a href="#catalogo" class="drawer-link text-[#0F3F49]/70 hover:text-[#0F3F49] transition-colors">Catálogo</a>
+      <a href="#ia" class="drawer-link text-[#0F3F49]/70 hover:text-[#0F3F49] transition-colors">Sistemas IA</a>
+      <a href="#cotizadorBar" class="drawer-link text-[#7F0508] hover:underline transition-colors mt-2 text-sm font-mono">[ Resumen de Cotización ]</a>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO SECTION — TOP FOLD WITH SPLINE 3D & MILLER'S OCEAN (INTERSTELLAR) -->
+  <!-- ========================================================================= -->
+  <div class="relative w-full overflow-hidden">
+    <section id="heroSection" class="relative min-h-screen lg:h-screen lg:max-h-[920px] pt-24 sm:pt-28 pb-8 sm:pb-10 px-4 sm:px-8 max-w-7xl mx-auto flex flex-col justify-center overflow-hidden z-10">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center my-auto">
+      
+      <!-- Left Column: Typography & Positioning (7 Cols) -->
+      <div class="lg:col-span-7 z-20 flex flex-col items-start text-left">
+        
+        <!-- Technical Status Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F3F49]/[0.05] border border-[#0F3F49]/15 text-[#0F3F49] text-[10px] sm:text-[11px] font-mono tracking-widest uppercase mb-3 sm:mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#7F0508] ring-2 ring-[#7F0508]/40 animate-pulse"></span>
+          <span>● TESSA LABS — WEB & AI ARCHITECTURE</span>
+        </div>
+
+        <!-- Giant Fluid H1 mixing Space Grotesk / Syne and Instrument Serif Italic -->
+        <h1 class="fluid-h1 font-display font-extrabold text-[#0F3F49] mb-3 sm:mb-4 max-w-2xl">
+          Ingeniería Web, <span class="font-serif italic font-normal text-[#7F0508]">Catálogos</span> & Sistemas de <span class="font-serif italic font-normal text-[#7F0508]">IA</span> que venden solos.
+        </h1>
+
+        <!-- High-Velocity Subtitle -->
+        <p class="text-xs sm:text-sm text-[#0F3F49]/75 max-w-xl font-normal leading-relaxed mb-6 sm:mb-7 font-sans">
+          Desarrollamos infraestructura web ultrarrápida, catálogos e-commerce con cálculo de Tasa BCV automática y agentes autónomos de IA que cierran ventas en WhatsApp sin pagar mensualidades de plataforma.
+        </p>
+
+        <!-- Dual CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto mb-6 sm:mb-8">
+          
+          <a href="#catalogo" class="magnetic-primary inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-full font-sans font-bold text-xs sm:text-sm tracking-tight group shadow-[0_4px_20px_rgba(15,63,73,0.18)]">
+            <i data-lucide="layers" class="w-4 h-4 fill-current"></i>
+            <span>Explorar Catálogo & Cotizar</span>
+            <i data-lucide="arrow-down" class="w-4 h-4 transition-transform group-hover:translate-y-0.5"></i>
+          </a>
+
+          <a href="#comparativa" class="inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-full bg-white/80 hover:bg-white text-[#7F0508] border border-[#7F0508]/30 hover:border-[#7F0508] font-sans font-semibold text-xs sm:text-sm tracking-tight transition-all shadow-sm group">
+            <i data-lucide="shield-check" class="w-4 h-4 text-[#7F0508] group-hover:scale-110 transition-transform"></i>
+            <span>Ver Arquitectura vs Apps</span>
+          </a>
+
+        </div>
+
+        <!-- Metric Anchors -->
+        <div class="grid grid-cols-3 gap-4 sm:gap-6 pt-3.5 sm:pt-4 border-t border-[#0F3F49]/15 w-full max-w-md font-mono">
+          <div>
+            <div class="text-xl sm:text-2xl font-bold font-display text-[#0F3F49]">&lt;0.4s</div>
+            <div class="text-[9px] sm:text-[10px] text-[#0F3F49]/60 tracking-wider uppercase mt-0.5">Carga Inicial 5G</div>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-bold font-display text-[#7F0508]">1-Clic</div>
+            <div class="text-[9px] sm:text-[10px] text-[#0F3F49]/60 tracking-wider uppercase mt-0.5">Checkout WhatsApp</div>
+          </div>
+          <div>
+            <div class="text-xl sm:text-2xl font-bold font-display text-[#0F3F49]">0%</div>
+            <div class="text-[9px] sm:text-[10px] text-[#0F3F49]/60 tracking-wider uppercase mt-0.5">Comisiones de Venta</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: 3D Spline Canvas (5 Cols) -->
+      <div class="lg:col-span-5 relative w-full h-[400px] sm:h-[500px] lg:h-[620px] xl:h-[680px] flex items-center justify-center">
+        
+        <!-- Ambient Glow -->
+        <div class="absolute inset-0 bg-radial-gradient from-[#7F0508]/10 via-[#0F3F49]/5 to-transparent pointer-events-none blur-3xl"></div>
+
+        <!-- 3D Stage Container -->
+        <div id="splineStage" class="relative w-full h-full flex items-center justify-center transition-opacity duration-700 overflow-visible">
+          
+          <canvas 
+            id="splineCanvas" 
+            class="w-full h-full relative z-10 transform-gpu origin-center opacity-0 transition-opacity duration-700 pointer-events-auto block"
+            style="touch-action: pan-y;">
+          </canvas>
+
+          <!-- Fallback Anchor -->
+          <div id="splineFallback" class="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+            <div class="w-64 h-64 sm:w-72 sm:h-72 rounded-full border border-[#0F3F49]/15 bg-gradient-to-tr from-[#ECE6DF] via-white to-[#0F3F49]/10 shadow-[0_0_80px_rgba(15,63,73,0.12)] flex items-center justify-center">
+              <div class="w-48 h-48 rounded-full border border-[#0F3F49]/10 animate-pulse-glow flex items-center justify-center">
+                <span class="text-[10px] font-mono text-[#0F3F49]/40 tracking-widest uppercase">TESSA 3D CORE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- KINETIC MARQUEE -->
+  <!-- ========================================================================= -->
+  <section class="py-5 border-y border-[#0F3F49]/20 bg-[#0F3F49] overflow-hidden relative z-20">
+    <div class="flex items-center gap-10 whitespace-nowrap animate-marquee">
+      
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-2 h-2 rounded-full bg-[#7F0508] ring-1 ring-[#7F0508]/50"></span> CATÁLOGOS WHATSAPP 24/7
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#ECE6DF]"></span> TASA BCV AUTOMÁTICA
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-2 h-2 rounded-full bg-[#7F0508] ring-1 ring-[#7F0508]/50"></span> AGENTES IA N8N & CHATWOOT
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#ECE6DF]"></span> CERO COMISIONES POR VENTA
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-2 h-2 rounded-full bg-[#7F0508] ring-1 ring-[#7F0508]/50"></span> CARGA EN 0.4s
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#ECE6DF]"></span> SISTEMAS ERP & FRIGATE IA
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+      <!-- Clones for continuous loop -->
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-2 h-2 rounded-full bg-[#7F0508] ring-1 ring-[#7F0508]/50"></span> CATÁLOGOS WHATSAPP 24/7
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#ECE6DF]"></span> TASA BCV AUTOMÁTICA
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-2 h-2 rounded-full bg-[#7F0508] ring-1 ring-[#7F0508]/50"></span> AGENTES IA N8N & CHATWOOT
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+      <span class="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#ECE6DF]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#ECE6DF]"></span> CERO COMISIONES POR VENTA
+      </span>
+      <span class="text-[#ECE6DF]/40 text-xs">•</span>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 2. THE "STOP RENTING" COMPARISON BANNER & MONOLITH MODULE -->
+  <!-- ========================================================================= -->
+  <section id="comparativa" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto relative z-10">
+    
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7F0508]/10 border border-[#7F0508]/25 text-[#7F0508] text-[11px] font-mono tracking-widest uppercase mb-4">
+        01 — PROPIEDAD TOTAL & CONTROL ABSOLUTO
+      </div>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#0F3F49] tracking-[-0.04em] mb-4">
+        Deja de pagar alquiler mensual. <br class="hidden sm:inline">
+        <span class="font-serif italic font-normal text-[#7F0508]">Sé dueño de tu propia infraestructura digital.</span>
+      </h2>
+      <p class="text-xs sm:text-sm text-[#0F3F49]/75 font-mono leading-relaxed">
+        El modelo tradicional de aplicaciones te atrapa en rentas perpetuas o tarifas infladas de agencias lentas. En TESSA diseñamos plataformas independientes que te pertenecen para siempre:
+      </p>
+    </div>
+
+    <!-- Comparative Bento Grid (3 Columns) -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      
+      <!-- Card 1: Apps de Alquiler Mensual -->
+      <div class="bento-spotlight p-7 flex flex-col justify-between border-[#7F0508]/25 bg-white/70 shadow-sm">
+        <div>
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#0F3F49]/10">
+            <span class="text-xs font-mono text-[#7F0508] font-bold uppercase">APPS GENÉRICAS</span>
+            <span class="text-[10px] font-mono bg-[#7F0508]/10 text-[#7F0508] px-2.5 py-0.5 rounded-full border border-[#7F0508]/20 font-bold">RENTA ETERNA</span>
+          </div>
+
+          <h3 class="text-xl font-display font-bold text-[#0F3F49] mb-2">Plataformas de Suscripción</h3>
+          <p class="text-xs text-[#0F3F49]/70 font-mono mb-6 leading-relaxed">
+            Plataformas tipo Shopify, PedidosOnline o apps de catálogos prediseñadas.
+          </p>
+
+          <div class="p-4 rounded-xl bg-[#ECE6DF]/90 border border-[#7F0508]/20 font-mono mb-6">
+            <div class="text-[#7F0508] font-bold text-xl sm:text-2xl mb-1">$35 a $200 / mes</div>
+            <div class="text-[11px] text-[#0F3F49]/70">= $420 a $2,400 al año en rentas</div>
+          </div>
+
+          <ul class="space-y-3 text-xs font-mono text-[#0F3F49]/85">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
+              <span>Si dejas de pagar el mes, <strong>te apagan la tienda</strong> y pierdes tus clientes.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
+              <span>Comisiones ocultas del 1.5% al 3% por cada orden recibida.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
+              <span>Plantillas cuadradas e idénticas a las de tu competencia.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
+              <span>Sin soporte para agentes de IA ni Tasa BCV automática real.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-[#0F3F49]/10 text-[11px] font-mono text-[#7F0508]">
+          ⚠️ Pérdida continua de capital sin acumular activos digitales propios.
+        </div>
+      </div>
+
+      <!-- Card 2: Agencias Tradicionales Locales -->
+      <div class="bento-spotlight p-7 flex flex-col justify-between border-[#0F3F49]/15 bg-white/70 shadow-sm">
+        <div>
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#0F3F49]/10">
+            <span class="text-xs font-mono text-[#0F3F49]/70 font-bold uppercase">AGENCIAS VIEJAS</span>
+            <span class="text-[10px] font-mono bg-[#0F3F49]/10 text-[#0F3F49] px-2.5 py-0.5 rounded-full border border-[#0F3F49]/20 font-bold">SOBREPRECIO</span>
+          </div>
+
+          <h3 class="text-xl font-display font-bold text-[#0F3F49] mb-2">Agencias Tradicionales</h3>
+          <p class="text-xs text-[#0F3F49]/70 font-mono mb-6 leading-relaxed">
+            Agencias de marketing genéricas montando WordPress pesados con plugins rotos.
+          </p>
+
+          <div class="p-4 rounded-xl bg-[#ECE6DF]/90 border border-[#0F3F49]/15 font-mono mb-6">
+            <div class="text-[#0F3F49] font-bold text-xl sm:text-2xl mb-1">$700 a $1,100 USD</div>
+            <div class="text-[11px] text-[#0F3F49]/70">Cobro inicial inflado + mantenimiento</div>
+          </div>
+
+          <ul class="space-y-3 text-xs font-mono text-[#0F3F49]/85">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
+              <span>Tiempos de entrega lentos de 3 a 6 semanas.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
+              <span>Páginas pesadas que tardan 4 a 6 segundos en cargar en teléfonos.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
+              <span>Te cobran $80/mes sólo por "actualizar plugins" de WordPress.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
+              <span>Cero conocimiento en automatización de Inteligencia Artificial.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-[#0F3F49]/10 text-[11px] font-mono text-[#0F3F49]/60">
+          ⚠️ Software obsoleto que ahuyenta a los clientes por lentitud de carga.
+        </div>
+      </div>
+
+      <!-- Card 3: Ecosistema Propio TESSA (Featured Winner - Inverted Deep Aquamarine) -->
+      <div class="bento-spotlight p-7 flex flex-col justify-between border-2 border-[#0F3F49] bg-[#0F3F49] text-[#ECE6DF] shadow-[0_12px_45px_rgba(15,63,73,0.22)] relative overflow-hidden">
+        <div>
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#ECE6DF]/20">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#ECE6DF] animate-ping"></span>
+              <span class="text-xs font-mono text-[#ECE6DF] font-bold uppercase tracking-wider">ECOSISTEMA TESSA</span>
+            </div>
+            <span class="text-[10px] font-mono bg-[#7F0508] text-[#ECE6DF] px-2.5 py-0.5 rounded-full border border-[#7F0508]/50 font-bold">ACTIVO PROPIO</span>
+          </div>
+
+          <h3 class="text-xl sm:text-2xl font-display font-extrabold text-[#ECE6DF] mb-2">Ingeniería & IA TESSA</h3>
+          <p class="text-xs text-[#ECE6DF]/80 font-mono mb-6 leading-relaxed">
+            Software propio de alta velocidad a la medida con checkout nativo en WhatsApp.
+          </p>
+
+          <div class="p-4 rounded-xl bg-[#08262C] border border-[#ECE6DF]/20 font-mono mb-6">
+            <div class="text-[#ECE6DF] font-bold text-2xl mb-1">Pago Único (Desde $120)</div>
+            <div class="text-[11px] text-[#ECE6DF]/80">0% Comisiones por venta • $0/mes hosting base</div>
+          </div>
+
+          <ul class="space-y-3 text-xs font-mono text-[#ECE6DF]">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
+              <span><strong>El software es tuyo:</strong> Nunca te apagamos la tienda ni cobramos porcentajes.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
+              <span><strong>Tasa Oficial BCV automática:</strong> Precios en $ y Bs. al día sin tocar nada.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
+              <span><strong>Velocidad extrema &lt;0.4s:</strong> Arquitectura moderna sin plugins lentos.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
+              <span><strong>Agentes IA y Chatwoot:</strong> Respuestas 24/7 y carritos automáticos.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pt-6 mt-6 border-t border-[#ECE6DF]/20">
+          <a href="#catalogo" class="w-full py-3 rounded-full bg-[#ECE6DF] hover:bg-white text-[#0F3F49] font-sans font-bold text-xs uppercase tracking-tight flex items-center justify-center gap-2 transition-all shadow-md">
+            <span>Ver Catálogo de Servicios</span>
+            <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3. CREACIONES & PORTAFOLIO EN VIVO (`#creaciones`) -->
+  <!-- ========================================================================= -->
+  <section id="creaciones" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto relative z-10 border-t border-[#0F3F49]/15">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7F0508]/10 border border-[#7F0508]/25 text-[#7F0508] text-[11px] font-mono tracking-widest uppercase mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
+          <span>02 — CREACIONES & PORTAFOLIO EN VIVO</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#0F3F49] tracking-[-0.04em]">
+          Proyectos en producción. <br class="hidden sm:inline">
+          <span class="font-serif italic font-normal text-[#7F0508]">Software vivo que genera ventas reales.</span>
+        </h2>
+      </div>
+
+      <p class="text-xs sm:text-sm text-[#0F3F49]/70 font-mono max-w-md leading-relaxed">
+        Comprueba la velocidad extrema, la estética y el flujo de compra en proyectos activos desarrollados por TESSA. Haz clic para probar la experiencia en vivo.
+      </p>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- ===================================================================== -->
+      <!-- PROYECTO 01: ONCE SPORTS (Suplementos & Ropa Fitness) -->
+      <!-- ===================================================================== -->
+      <article class="bento-spotlight flex flex-col justify-between border border-[#0F3F49]/15 bg-white/80 group shadow-sm hover:shadow-xl transition-all">
+        
+        <div>
+          <!-- Browser Mockup Window Header -->
+          <div class="flex items-center justify-between px-5 py-3.5 bg-[#ECE6DF] border-b border-[#0F3F49]/10 text-[11px] font-mono">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#7F0508] inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#0F3F49]/40 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#0F3F49] inline-block"></span>
+              <span class="text-[#0F3F49]/60 ml-2 hidden sm:inline">jotawebs.github.io/oncesports</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#7F0508] animate-ping"></span>
+              <span class="text-[#7F0508] font-bold uppercase text-[10px] tracking-wider">● EN PRODUCCIÓN</span>
+            </div>
+          </div>
+
+          <!-- Card Body Inner -->
+          <div class="p-6 sm:p-8">
+            
+            <!-- Brand Identity Header -->
+            <div class="flex items-start justify-between gap-4 mb-6">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-[#ECE6DF] border border-[#0F3F49]/15 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:border-[#7F0508] transition-colors">
+                  <img src="assets/once-logo.png" alt="Once Sports Logo" class="w-full h-full object-contain" onerror="this.src='assets/once-logo.svg'">
+                </div>
+                <div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="text-2xl font-display font-extrabold text-[#0F3F49] group-hover:text-[#7F0508] transition-colors">Once Sports</h3>
+                    <span class="text-[9px] font-mono bg-[#7F0508] text-[#ECE6DF] px-2 py-0.5 rounded-full border border-[#7F0508]/30 font-bold">VALENCIA, VZLA</span>
+                  </div>
+                  <p class="text-xs font-mono text-[#0F3F49]/70 mt-0.5">Suplementación Deportiva & Ropa Fitness</p>
+                </div>
+              </div>
+
+              <!-- External Pill Link Indicator -->
+              <a href="https://jotawebs.github.io/oncesports/" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full bg-[#ECE6DF] hover:bg-[#0F3F49] text-[#0F3F49] hover:text-[#ECE6DF] border border-[#0F3F49]/15 transition-all shrink-0" title="Abrir Once Sports en pestaña nueva">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+            <!-- Stylized Athletic UI Preview Box -->
+            <div class="p-5 rounded-2xl bg-[#ECE6DF]/70 border border-[#0F3F49]/10 mb-6 relative overflow-hidden group/preview">
+              <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-[#7F0508]/10 rounded-full blur-2xl pointer-events-none"></div>
+              
+              <div class="flex items-center justify-between text-[10px] font-mono text-[#0F3F49]/60 mb-3 border-b border-[#0F3F49]/10 pb-2">
+                <span>PROPUESTA DE VALOR</span>
+                <span class="text-[#7F0508] font-bold">100% ORIGINAL A TASA BCV</span>
+              </div>
+
+              <blockquote class="text-sm font-sans text-[#0F3F49] italic font-medium leading-snug mb-4">
+                "Suplementación bien elegida. Marcas originales, información clara y delivery en Valencia, Carabobo. Decide con inteligencia."
+              </blockquote>
+
+              <!-- Live Feature Badges -->
+              <div class="grid grid-cols-2 gap-2 text-[11px] font-mono text-[#0F3F49]">
+                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-[#0F3F49]/10 shadow-xs">
+                  <i data-lucide="shopping-cart" class="w-3.5 h-3.5 text-[#7F0508]"></i>
+                  <span>Carrito Flotante</span>
+                </div>
+                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-[#0F3F49]/10 shadow-xs">
+                  <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#0F3F49]"></i>
+                  <span>Tasa BCV al Día</span>
+                </div>
+                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-[#0F3F49]/10 shadow-xs">
+                  <i data-lucide="message-circle" class="w-3.5 h-3.5 text-[#7F0508]"></i>
+                  <span>Pedido a WhatsApp</span>
+                </div>
+                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-[#0F3F49]/10 shadow-xs">
+                  <i data-lucide="zap" class="w-3.5 h-3.5 text-[#0F3F49]"></i>
+                  <span>Carga en &lt;0.4s</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Context Paragraph -->
+            <p class="text-xs text-[#0F3F49]/80 leading-relaxed mb-6 font-sans">
+              Catálogo e-commerce interactivo con checkout automatizado hacia WhatsApp. Los clientes seleccionan productos con variantes de tamaño y sabor, visualizan el monto total estimado en divisas y bolívares a tasa oficial BCV, y envían su orden lista para despacho por delivery sin intermediarios ni cobro de comisiones.
+            </p>
+
+            <!-- Tech Tags -->
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-[#0F3F49]/10 font-mono text-[10px] text-[#0F3F49]/70">
+              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">HTML5 / Vanilla JS</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">WhatsApp Commerce</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">Tasa Oficial BCV</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">Zero-Bloat &lt;0.4s</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#0F3F49] text-[#ECE6DF] border border-[#0F3F49]">by tessalabs</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Card Footer Action -->
+        <div class="p-6 sm:p-8 pt-0">
+          <a href="https://jotawebs.github.io/oncesports/" target="_blank" rel="noopener noreferrer" class="magnetic-primary w-full py-3.5 rounded-full font-sans font-bold text-xs uppercase tracking-tight flex items-center justify-center gap-2 group/btn shadow-[0_4px_25px_rgba(15,63,73,0.18)]">
+            <span>Explorar Once Sports en Vivo</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5"></i>
+          </a>
+        </div>
+
+      </article>
+
+      <!-- ===================================================================== -->
+      <!-- PROYECTO 02 / SLOT DISPONIBLE: TU PRÓXIMO LANZAMIENTO -->
+      <!-- ===================================================================== -->
+      <article class="bento-spotlight flex flex-col justify-between border-dashed border-[#0F3F49]/30 hover:border-[#7F0508] bg-white/60 hover:bg-white/80 group transition-all shadow-sm">
+        
+        <div>
+          <!-- Browser Mockup Window Header -->
+          <div class="flex items-center justify-between px-5 py-3.5 bg-[#ECE6DF] border-b border-[#0F3F49]/10 text-[11px] font-mono">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#0F3F49]/30 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#0F3F49]/30 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#0F3F49]/30 inline-block"></span>
+              <span class="text-[#0F3F49]/60 ml-2 hidden sm:inline">tu-negocio.com — Próximo Despliegue</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#7F0508] animate-pulse"></span>
+              <span class="text-[#7F0508] font-bold uppercase text-[10px] tracking-wider">● SLOT DISPONIBLE</span>
+            </div>
+          </div>
+
+          <!-- Card Body Inner -->
+          <div class="p-6 sm:p-8">
+            
+            <!-- Brand Identity Header -->
+            <div class="flex items-start justify-between gap-4 mb-6">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-[#7F0508]/10 border border-dashed border-[#7F0508]/30 flex items-center justify-center shrink-0 text-[#7F0508] group-hover:scale-105 transition-all">
+                  <i data-lucide="sparkles" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <h3 class="text-2xl font-display font-extrabold text-[#0F3F49]">Tu Marca Aquí</h3>
+                    <span class="text-[9px] font-mono bg-[#0F3F49]/[0.08] text-[#0F3F49] px-2 py-0.5 rounded-full border border-[#0F3F49]/15 font-bold">DESPLIEGUE EN 48H-72H</span>
+                  </div>
+                  <p class="text-xs font-mono text-[#0F3F49]/70 mt-0.5">Catálogo WhatsApp, Landing o Sistema IA</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Value Callout Box -->
+            <div class="p-5 rounded-2xl bg-[#ECE6DF]/80 border border-dashed border-[#0F3F49]/20 mb-6 text-xs font-mono">
+              <div class="text-[#7F0508] font-bold mb-2 flex items-center gap-2">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+                <span>¿QUÉ INCLUYE TU PRÓXIMA CREACIÓN CON TESSA?</span>
+              </div>
+              <ul class="space-y-2.5 text-[#0F3F49]/90">
+                <li class="flex items-center gap-2">
+                  <span class="text-[#0F3F49] font-bold">✓</span> Dominio propio <code>.com</code> y hosting de alta velocidad
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-[#0F3F49] font-bold">✓</span> Checkout WhatsApp directo con cálculo automático de Tasa BCV
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-[#0F3F49] font-bold">✓</span> Cero mensualidades de alquiler ni cobro de comisiones
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-[#0F3F49] font-bold">✓</span> Entrega garantizada lista para vender en pocos días
+                </li>
+              </ul>
+            </div>
+
+            <p class="text-xs text-[#0F3F49]/80 leading-relaxed mb-6 font-sans">
+              Únete a las marcas que dejan atrás los PDFs pesados y las plantillas cuadradas de Shopify. Te construimos una plataforma rápida, personalizada y enfocada exclusivamente en cerrar ventas.
+            </p>
+
+            <!-- Tech Tags -->
+            <div class="flex flex-wrap gap-2 pt-2 border-t border-[#0F3F49]/10 font-mono text-[10px] text-[#0F3F49]/70">
+              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">Arquitectura Propia</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">Sin Comisiones</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">Tasa BCV Auto</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">Entrega Rápida</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Card Footer Action -->
+        <div class="p-6 sm:p-8 pt-0">
+          <a href="#catalogo" class="w-full py-3.5 rounded-full bg-[#7F0508] hover:bg-[#9E0A0E] text-[#ECE6DF] font-mono text-xs uppercase tracking-wider border border-[#7F0508]/30 transition-all flex items-center justify-center gap-2 shadow-[0_6px_25px_rgba(127,5,8,0.25)]">
+            <span>Cotizar Mi Proyecto Ahora</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </article>
+
+      <!-- 
+        ========================================================================
+        💡 GUÍA PARA AGREGAR NUEVAS CREACIONES A ESTE PORTAFOLIO:
+        Para sumar un nuevo proyecto, duplica el bloque <article class="bento-spotlight ...">
+        de "Once Sports", actualiza el enlace en href="https://...", el logo, el título 
+        y los textos de valor. ¡El diseño se adapta automáticamente!
+        ========================================================================
+      -->
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. INTERACTIVE SERVICE CATALOG & WHATSAPP QUOTER (`#catalogo` & `#ia`) -->
+  <!-- ========================================================================= -->
+  <section id="catalogo" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto relative z-10">
+    
+    <!-- Encabezado de la Sección -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-emerald-400 text-[11px] font-mono tracking-widest uppercase mb-4">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>03 — PROPIEDAD TOTAL • PAGO ÚNICO</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F4F4F0] tracking-[-0.04em]">
+          Escala de Soluciones <br class="hidden sm:inline">
+          <span class="font-serif italic font-normal text-emerald-400">Tessa Engineering.</span>
+        </h2>
+      </div>
+
+      <p class="text-xs sm:text-sm text-zinc-400 font-mono max-w-md leading-relaxed">
+        Elige el paquete ideal para tu negocio. Sé dueño absoluto de tu infraestructura digital sin mensualidades de alquiler ni comisiones por ventas.
+      </p>
+    </div>
+
+    <!-- Bento Grid: 4 Paquetes de Propiedad Total -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      
+      <!-- ===================================================================== -->
+      <!-- 1. TESSA LAUNCH ($120) -->
+      <!-- ===================================================================== -->
+      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-[28px] bg-[#0D0E12]/90 backdrop-blur-xl border border-white/[0.08] hover:border-white/20 transition-all duration-300 group" id="cardProduct1" data-prod-id="1">
+        <div>
+          <!-- Badge Superior -->
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.08]">
+            <span class="text-[11px] font-mono text-zinc-400">NIVEL 01</span>
+            <span class="text-[10px] font-mono bg-white/[0.06] text-zinc-200 px-2.5 py-0.5 rounded-full border border-white/10 font-bold uppercase tracking-wider">
+              PAGO ÚNICO
+            </span>
+          </div>
+
+          <!-- Título y Precio -->
+          <h3 class="text-2xl font-display font-bold text-white mb-1">Tessa Launch</h3>
+          <div class="text-xs font-mono text-zinc-400 mb-4">Catálogo Express</div>
+
+          <div class="my-4">
+            <span class="text-4xl font-display font-extrabold text-[#F4F4F0]">$120</span>
+            <span class="text-xs font-mono text-emerald-400 font-bold block mt-1">Pago Único • Hosting Gratis</span>
+          </div>
+
+          <p class="text-xs text-zinc-400 leading-relaxed mb-6 font-sans">
+            Diseño estilo Startup de alto impacto visual, optimizado para validar rápido y vender directamente sin intermediarios.
+          </p>
+
+          <!-- Lista de Características -->
+          <ul class="space-y-3 text-xs font-mono text-zinc-300 border-t border-white/[0.06] pt-5 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Diseño estilo Startup ultra moderno</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Catálogo de productos o servicios</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Carrito y pedido directo a WhatsApp</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Autogestión de inventario y precios con <strong>Google Sheets</strong></span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Carga ultrarrápida en 0.4s</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Hosting gratuito de por vida</span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="toggleSelectProduct(1, 'Tessa Launch', 120, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-white/[0.06] hover:bg-white/[0.14] text-white font-mono text-xs uppercase tracking-wider border border-white/10 hover:border-white/25 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.01]">
+          <span>Seleccionar Plan ↗</span>
+        </button>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- 2. TESSA CATÁLOGO PRO ($290) [DESTACADO // EL MÁS VENDIDO] -->
+      <!-- ===================================================================== -->
+      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-[28px] bg-gradient-to-b from-[#0D1F17]/90 via-[#0D0E12] to-[#0D0E12] border-2 border-emerald-400/60 shadow-[0_0_35px_rgba(16,185,129,0.18)] transition-all duration-300 relative group !overflow-visible" id="cardProduct2" data-prod-id="2" style="overflow: visible;">
+        <!-- Badge Flotante Superior Destacado -->
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 px-3.5 py-1 rounded-full bg-emerald-400 text-[#060609] font-mono text-[10px] font-extrabold uppercase tracking-widest shadow-[0_4px_16px_rgba(16,185,129,0.45)] whitespace-nowrap">
+          ★ EL MÁS VENDIDO
+        </div>
+
+        <div>
+          <!-- Cabecera de Tarjeta -->
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-emerald-400/20 pt-1.5">
+            <span class="text-[11px] font-mono text-emerald-400 font-bold">NIVEL 02</span>
+            <span class="text-[10px] font-mono bg-emerald-400/15 text-emerald-300 px-2.5 py-0.5 rounded-full border border-emerald-400/30 font-bold uppercase tracking-wider">
+              FAVORITO COMERCIOS
+            </span>
+          </div>
+
+          <!-- Título y Precio -->
+          <h3 class="text-2xl font-display font-extrabold text-white mb-1">Tessa Catálogo Pro</h3>
+          <div class="text-xs font-mono text-emerald-400 mb-4">E-Commerce WhatsApp & BCV</div>
+
+          <div class="my-4">
+            <span class="text-4xl font-display font-extrabold text-[#F4F4F0]">$290</span>
+            <span class="text-xs font-mono text-emerald-400 font-bold block mt-1">Pago Único • Dominio .com Incluido</span>
+          </div>
+
+          <p class="text-xs text-zinc-300 leading-relaxed mb-6 font-sans">
+            El motor de pedidos autónomo más eficiente: el cliente arma su orden con tasa al día y te envía el pedido estructurado listo para cobrar.
+          </p>
+
+          <!-- Lista de Características -->
+          <ul class="space-y-3 text-xs font-mono text-zinc-200 border-t border-emerald-400/20 pt-5 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span><strong>Dominio .com propio</strong> y certificado SSL incluido</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Carrito interactivo con selección de tallas y/o variantes</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Cálculo automático en $ y Bs con <strong>Tasa BCV Automática</strong></span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Módulo para comprobantes (Pago Móvil, Zelle y Binance)</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <span>Autogestión de inventario y precios con <strong>Google Sheets</strong></span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="toggleSelectProduct(2, 'Tessa Catálogo Pro', 290, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-[#060609] font-sans font-bold text-xs uppercase tracking-tight transition-all flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:scale-[1.02]">
+          <span>Seleccionar Plan ↗</span>
+        </button>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- 3. TESSA CORPORATE ($850) [TRANQUILIDAD TOTAL] -->
+      <!-- ===================================================================== -->
+      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-[28px] bg-[#0D0E12]/90 backdrop-blur-xl border border-white/[0.08] hover:border-cyan-400/40 transition-all duration-300 group" id="cardProduct3" data-prod-id="3">
+        <div>
+          <!-- Badge Superior -->
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.08]">
+            <span class="text-[11px] font-mono text-zinc-400">NIVEL 03</span>
+            <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-300 px-2.5 py-0.5 rounded-full border border-cyan-500/20 font-bold uppercase tracking-wider">
+              TRANQUILIDAD TOTAL
+            </span>
+          </div>
+
+          <!-- Título y Precio -->
+          <h3 class="text-2xl font-display font-bold text-white mb-1">Tessa Corporate</h3>
+          <div class="text-xs font-mono text-cyan-300 mb-4">Web Corporativa de Alto Impacto</div>
+
+          <div class="my-4">
+            <span class="text-4xl font-display font-extrabold text-[#F4F4F0]">$850</span>
+            <span class="text-xs font-mono text-cyan-300 font-bold block mt-1">Pago Único • Infraestructura Blindada</span>
+          </div>
+
+          <p class="text-xs text-zinc-400 leading-relaxed mb-6 font-sans">
+            Presencia institucional de primer nivel para empresas consolidadas que buscan máxima autoridad y cero preocupaciones técnicas.
+          </p>
+
+          <!-- Diferencial Clave Resaltado -->
+          <div class="p-3.5 bg-cyan-950/20 rounded-2xl border border-cyan-500/30 mb-6">
+            <div class="flex items-start gap-2.5 text-xs font-mono text-cyan-200">
+              <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+              <span><strong>Diferencial Clave:</strong> Incluye <strong>3 años</strong> de servidor dedicado, dominio .com y ciberseguridad avanzada ya pagados.</span>
+            </div>
+          </div>
+
+          <!-- Lista de Características -->
+          <ul class="space-y-3 text-xs font-mono text-zinc-300 border-t border-white/[0.06] pt-5 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+              <span>Plataforma corporativa multipágina</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+              <span>Animaciones fluidas y microinteracciones a 60fps</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+              <span>Optimización SEO local indexada en Google</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+              <span>Correos corporativos y respaldo continuo</span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="toggleSelectProduct(3, 'Tessa Corporate', 850, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-white/[0.06] hover:bg-cyan-500/20 text-white hover:text-cyan-200 font-mono text-xs uppercase tracking-wider border border-white/10 hover:border-cyan-500/40 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.01]">
+          <span>Seleccionar Plan ↗</span>
+        </button>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- 4. TESSA CORPORATE + CHATBOT IA ($1.000) [AUTOMATIZACIÓN FULL] -->
+      <!-- ===================================================================== -->
+      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-[28px] bg-gradient-to-b from-[#191122]/90 via-[#0D0E12] to-[#0D0E12] border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 group shadow-[0_0_30px_rgba(168,85,247,0.12)]" id="cardProduct4" data-prod-id="4">
+        <div>
+          <!-- Badge Superior -->
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-purple-500/20">
+            <span class="text-[11px] font-mono text-purple-400 font-bold">NIVEL 04 — ELITE</span>
+            <span class="text-[10px] font-mono bg-purple-500/15 text-purple-300 px-2.5 py-0.5 rounded-full border border-purple-500/30 font-bold uppercase tracking-wider">
+              AUTOMATIZACIÓN FULL
+            </span>
+          </div>
+
+          <!-- Título y Precio -->
+          <h3 class="text-2xl font-display font-extrabold text-white mb-1">Corporate + IA</h3>
+          <div class="text-xs font-mono text-purple-300 mb-4">Plataforma Web + Agente Autónomo 24/7</div>
+
+          <div class="my-4">
+            <span class="text-4xl font-display font-extrabold text-[#F4F4F0]">$1.000</span>
+            <span class="text-xs font-mono text-purple-300 font-bold block mt-1">Pago Único • Ecosistema Completo</span>
+          </div>
+
+          <p class="text-xs text-zinc-300 leading-relaxed mb-6 font-sans">
+            La solución definitiva de transformación digital: une la autoridad de tu plataforma corporativa con atención y conversión automatizada con IA.
+          </p>
+
+          <!-- Badge Destacado Chatbot -->
+          <div class="p-3.5 bg-purple-950/30 rounded-2xl border border-purple-500/30 mb-6">
+            <div class="flex items-start gap-2.5 text-xs font-mono text-purple-200">
+              <i data-lucide="bot" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <span><strong>Chatbot Interactivo IA:</strong> Entrenado a medida con los datos, catálogos y políticas de tu empresa para atención al cliente 24/7.</span>
+            </div>
+          </div>
+
+          <!-- Lista de Características -->
+          <ul class="space-y-3 text-xs font-mono text-zinc-300 border-t border-purple-500/20 pt-5 mb-8">
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <span><strong>Todo lo incluido en el plan Corporate</strong></span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <span><strong>3 años</strong> de servidor dedicado, dominio .com y ciberseguridad</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <span>Chatbot interactivo 24/7 integrado</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <span>Atención continua y calificación de clientes potenciales</span>
+            </li>
+          </ul>
+        </div>
+
+        <button onclick="toggleSelectProduct(4, 'Tessa Corporate + Chatbot IA', 1000, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-purple-500/20 hover:bg-purple-500/30 text-purple-200 font-mono text-xs uppercase tracking-wider border border-purple-500/40 hover:border-purple-400 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.01] shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+          <span>Seleccionar Plan ↗</span>
+        </button>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. DYNAMIC STICKY DRAWER: "ARMAR COTIZACIÓN PARA WHATSAPP" -->
+  <!-- ========================================================================= -->
+  <aside id="cotizadorBar" class="fixed bottom-4 sm:bottom-6 inset-x-0 z-40 flex justify-center px-4 pointer-events-none">
+    <div class="pointer-events-auto w-full max-w-4xl bg-[#0F3F49]/95 backdrop-blur-2xl border border-[#0F3F49]/30 rounded-3xl sm:rounded-full px-5 sm:px-8 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_15px_50px_rgba(15,63,73,0.35)] transition-all">
+      
+      <!-- Selection Summary -->
+      <div class="flex items-center gap-4 w-full sm:w-auto justify-between sm:justify-start">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#7F0508] border border-[#7F0508]/50 flex items-center justify-center text-[#ECE6DF] shrink-0 shadow-md">
+            <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <div class="text-[10px] font-mono tracking-widest uppercase text-[#ECE6DF]/70" id="barItemCount">0 SERVICIOS SELECCIONADOS</div>
+            <div class="flex items-baseline gap-2">
+              <span class="text-xl sm:text-2xl font-display font-extrabold text-[#ECE6DF]" id="barInitialTotal">$0</span>
+              <span class="text-xs font-mono text-[#ECE6DF]/80 font-bold">Inversión Inicial</span>
+              <span class="text-xs font-mono text-[#ECE6DF] font-bold hidden" id="barMonthlyTotal">+ $0/mes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detail trigger for mobile -->
+        <button onclick="toggleDetailsPopup()" class="sm:hidden text-xs font-mono text-[#ECE6DF]/80 underline">
+          Ver lista
+        </button>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3 w-full sm:w-auto">
+        <button onclick="resetQuotation()" class="hidden sm:inline-flex text-xs font-mono text-[#ECE6DF]/60 hover:text-[#ECE6DF] px-3 py-2 transition-colors">
+          Limpiar
+        </button>
+
+        <a id="btnSendWhatsAppQuotation" href="#" target="_blank" class="w-full sm:w-auto px-7 py-3 rounded-full bg-[#ECE6DF] hover:bg-white text-[#0F3F49] font-sans font-bold text-xs sm:text-sm tracking-tight flex items-center justify-center gap-2 whitespace-nowrap shadow-md transition-all group">
+          <i data-lucide="message-circle" class="w-4 h-4 fill-current"></i>
+          <span>Enviar Solicitud a WhatsApp ↗</span>
+        </a>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Quoter Breakdown Popup Modal (Mobile/Desktop helper) -->
+  <div id="detailsPopup" class="fixed inset-0 z-50 bg-[#0F3F49]/50 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-[#ECE6DF] border border-[#0F3F49]/20 w-full max-w-lg rounded-3xl p-6 shadow-2xl relative font-mono text-xs text-[#0F3F49]">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#0F3F49]/15">
+        <span class="font-bold text-[#0F3F49] uppercase tracking-wider flex items-center gap-2">
+          <i data-lucide="list" class="w-4 h-4 text-[#7F0508]"></i>
+          <span>Desglose de Cotización</span>
+        </span>
+        <button onclick="toggleDetailsPopup()" class="text-[#0F3F49]/60 hover:text-[#0F3F49] text-base font-bold">✕</button>
+      </div>
+
+      <div id="popupSelectedList" class="space-y-2.5 max-h-60 overflow-y-auto mb-6 text-[#0F3F49]/90">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div class="p-4 rounded-2xl bg-white/80 border border-[#0F3F49]/15 space-y-1.5 mb-6">
+        <div class="flex justify-between text-[#0F3F49] font-bold text-sm">
+          <span>Inversión Inicial:</span>
+          <span class="text-[#0F3F49]" id="popupInitialTotal">$0 USD</span>
+        </div>
+        <div class="flex justify-between text-[#0F3F49]/70 text-xs">
+          <span>Mantenimiento Mensual:</span>
+          <span class="text-[#7F0508] font-bold" id="popupMonthlyTotal">$0 USD / mes</span>
+        </div>
+      </div>
+
+      <div class="flex gap-3">
+        <button onclick="toggleDetailsPopup()" class="w-full py-3 rounded-full bg-[#0F3F49] hover:bg-[#17525E] text-[#ECE6DF] font-bold text-xs uppercase tracking-wider transition-all">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- WHATSAPP PHONE NUMBER SETTER (BOTTOM LEFT FLOATING BADGE) -->
+  <!-- ========================================================================= -->
+  <div id="phoneConfigModal" class="fixed inset-0 z-50 bg-[#0F3F49]/50 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-[#ECE6DF] border border-[#0F3F49]/20 w-full max-w-md rounded-3xl p-6 shadow-2xl relative font-mono text-[#0F3F49]">
+      <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#0F3F49]/15">
+        <div class="flex items-center gap-2 text-[#0F3F49] font-bold text-xs uppercase tracking-wider">
+          <i data-lucide="settings" class="w-4 h-4 text-[#7F0508]"></i>
+          <span>Vincular WhatsApp de Destino</span>
+        </div>
+        <button onclick="document.getElementById('phoneConfigModal').classList.add('hidden')" class="text-[#0F3F49]/60 hover:text-[#0F3F49] text-base font-bold">✕</button>
+      </div>
+      <p class="text-xs text-[#0F3F49]/80 mb-4 leading-relaxed font-sans">
+        Ingresa el número de WhatsApp receptor con código de país (ejemplo: <code>584120000000</code> para Venezuela o <code>13050000000</code> para USA).
+      </p>
+      <div class="space-y-3">
+        <div>
+          <label class="block text-[11px] text-[#0F3F49]/70 mb-1 uppercase tracking-wider font-bold">Número de WhatsApp:</label>
+          <input type="text" id="ownerPhoneInput" placeholder="584120000000" class="w-full bg-white border border-[#0F3F49]/20 rounded-xl px-4 py-2.5 text-sm text-[#0F3F49] focus:outline-none focus:border-[#7F0508]">
+          <div id="phoneStatusNotice" class="text-xs text-[#0F3F49]/70 mt-1.5">ℹ️ Predeterminado: +584120000000</div>
+        </div>
+        <div class="flex gap-2 pt-2">
+          <button onclick="saveOwnerPhoneNumber(document.getElementById('ownerPhoneInput').value); document.getElementById('phoneConfigModal').classList.add('hidden');" class="magnetic-primary flex-1 py-2.5 rounded-full font-bold text-xs">
+            Guardar Número
+          </button>
+          <button onclick="saveOwnerPhoneNumber(''); document.getElementById('ownerPhoneInput').value=''; document.getElementById('phoneConfigModal').classList.add('hidden');" class="py-2.5 px-4 rounded-full bg-[#0F3F49]/10 hover:bg-[#0F3F49]/20 text-[#0F3F49] text-xs font-semibold">
+            Restablecer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gear Trigger Button -->
+  <button onclick="document.getElementById('phoneConfigModal').classList.remove('hidden'); document.getElementById('phoneConfigModal').classList.add('flex');" class="fixed bottom-20 sm:bottom-6 left-6 z-30 px-3.5 py-2 rounded-full bg-white/90 hover:bg-[#0F3F49] border border-[#0F3F49]/20 hover:border-[#0F3F49] text-[#0F3F49] hover:text-[#ECE6DF] shadow-xl backdrop-blur-md transition-all flex items-center gap-2 text-xs font-mono group" title="Configurar número receptor de WhatsApp">
+    <i data-lucide="settings" class="w-3.5 h-3.5 group-hover:rotate-90 transition-transform duration-500"></i>
+    <span class="hidden sm:inline">Vincular tu WhatsApp</span>
+  </button>
+
+  <!-- ========================================================================= -->
+  <!-- 5. FOOTER -->
+  <!-- ========================================================================= -->
+  <footer class="border-t border-[#0F3F49]/20 bg-[#0F3F49] text-[#ECE6DF] py-14 px-4 sm:px-8 relative z-10 text-xs font-mono mt-20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <!-- Brand & Coordinates -->
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg overflow-hidden border border-[#ECE6DF]/20 bg-[#ECE6DF] p-0.5 shadow-sm">
+          <img src="assets/tessa/tessa-emblem-concrete.jpg" alt="TESSA LABS" class="w-full h-full object-cover">
+        </div>
+        <span class="font-display font-extrabold text-[#ECE6DF] text-sm tracking-wider">TESSA LABS</span>
+        <span class="text-[#ECE6DF]/30">|</span>
+        <span class="text-[#ECE6DF]/80">INGENIERÍA WEB, CATÁLOGOS & SISTEMAS IA</span>
+      </div>
+
+      <!-- Links -->
+      <div class="flex items-center gap-6">
+        <a href="#comparativa" class="hover:text-white transition-colors">Comparativa</a>
+        <a href="#creaciones" class="hover:text-white transition-colors">Creaciones</a>
+        <a href="#catalogo" class="hover:text-white transition-colors">Catálogo</a>
+        <a href="#ia" class="hover:text-white transition-colors">Sistemas IA</a>
+      </div>
+
+      <!-- Status Indicator -->
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#7F0508] shadow-[0_0_8px_rgba(127,5,8,0.8)]"></span>
+        <span class="text-[#ECE6DF]/80">VZLA & GLOBAL — 60FPS</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: INTERACTIVE QUOTER & PERFORMANCE LOGIC -->
+  <!-- ========================================================================= -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // -------------------------------------------------------------------------
+    // 1. MOBILE DRAWER NAVIGATION
+    // -------------------------------------------------------------------------
+    const navMenuToggle = document.getElementById('navMenuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const closeMobileDrawer = document.getElementById('closeMobileDrawer');
+
+    if (navMenuToggle && mobileDrawer) {
+      navMenuToggle.addEventListener('click', () => {
+        mobileDrawer.classList.remove('hidden');
+        mobileDrawer.classList.add('flex');
+      });
+      closeMobileDrawer.addEventListener('click', () => {
+        mobileDrawer.classList.add('hidden');
+        mobileDrawer.classList.remove('flex');
+      });
+      document.querySelectorAll('.drawer-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileDrawer.classList.add('hidden');
+          mobileDrawer.classList.remove('flex');
+        });
+      });
+    }
+
+    // -------------------------------------------------------------------------
+    // 2. 3D SPLINE RUNTIME & GPU BATTERY OPTIMIZATION
+    // -------------------------------------------------------------------------
+    const heroSection = document.getElementById('heroSection');
+    const splineStage = document.getElementById('splineStage');
+    const splineCanvas = document.getElementById('splineCanvas');
+    const splineFallback = document.getElementById('splineFallback');
+
+    let splineApp = null;
+    let isHeroInView = true;
+
+    // Load and initialize the interactive 3D sphere using native Spline Application
+    async function initSplineSphere() {
+      if (!splineCanvas) return;
+      try {
+        const { Application } = await import('https://unpkg.com/@splinetool/runtime/build/runtime.js');
+        splineApp = new Application(splineCanvas);
+        await splineApp.load('https://prod.spline.design/CTpwTiu6RLbc7HAr/scene.splinecode');
+
+        // Hide scene background mesh so the canvas is 100% transparent and seamlessly integrates
+        const bg = splineApp.findObjectByName('BG');
+        if (bg) bg.visible = false;
+
+        // Eliminate the Spline watermark from the WebGL shader pipeline
+        if (splineApp._renderer && splineApp._renderer.pipeline) {
+          splineApp._renderer.pipeline.setWatermark(null);
+          splineApp._renderer.pipeline.setWatermark = function() {};
+        }
+
+        // Safety check to ensure async-loaded watermark textures never get reattached
+        let watermarkChecks = 0;
+        const watermarkInterval = setInterval(() => {
+          if (splineApp && splineApp._renderer && splineApp._renderer.pipeline) {
+            splineApp._renderer.pipeline.setWatermark(null);
+          }
+          if (++watermarkChecks > 10) clearInterval(watermarkInterval);
+        }, 200);
+
+        // Perfectly frame and center the sphere by centering the camera at X=0
+        const frameSphere = () => {
+          if (splineApp && splineApp._camera) {
+            splineApp._camera.position.x = 0;
+            splineApp._camera.position.y = 0;
+            const isMobile = window.innerWidth < 768;
+            splineApp._camera.zoom = isMobile ? 0.72 : 0.82;
+            splineApp._camera.updateProjectionMatrix();
+          }
+        };
+
+        frameSphere();
+        window.addEventListener('resize', frameSphere);
+
+        // Smooth reveal on load
+        splineCanvas.classList.remove('opacity-0');
+        splineCanvas.classList.add('opacity-100');
+        if (splineFallback) {
+          splineFallback.style.opacity = '0';
+          splineFallback.style.transition = 'opacity 0.6s ease';
+        }
+      } catch (err) {
+        console.warn('Spline load error:', err);
+        // Ensure canvas or fallback is visible if network anomaly occurs
+        if (splineCanvas) {
+          splineCanvas.classList.remove('opacity-0');
+          splineCanvas.classList.add('opacity-100');
+        }
+      }
+    }
+
+    initSplineSphere();
+
+    // -------------------------------------------------------------------------
+    // 2.1 MILLER'S PLANET (INTERSTELLAR) OCEAN SIMULATION (CANVAS 2D DYNAMIC ENGINE)
+    // -------------------------------------------------------------------------
+    function initInterstellarOcean() {
+      const oceanCanvas = document.getElementById('interstellarOceanCanvas');
+      if (!oceanCanvas) return;
+      const ctx = oceanCanvas.getContext('2d');
+      if (!ctx) return;
+
+      let width = oceanCanvas.width = window.innerWidth;
+      let height = oceanCanvas.height = window.innerHeight;
+
+      function resizeOcean() {
+        if (!oceanCanvas) return;
+        width = oceanCanvas.width = window.innerWidth;
+        height = oceanCanvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resizeOcean);
+
+      let time = 0;
+
+      function renderOcean() {
+        if (document.hidden) {
+          requestAnimationFrame(renderOcean);
+          return;
+        }
+
+        time += 0.007;
+        ctx.clearRect(0, 0, width, height);
+
+        // Ambient sky-sea gradient (Miller's planet brooding palette: Aquamarine deep into Concrete reflections)
+        const skyGradient = ctx.createLinearGradient(0, 0, 0, height);
+        skyGradient.addColorStop(0, 'rgba(236, 230, 223, 0.2)');
+        skyGradient.addColorStop(0.35, 'rgba(15, 63, 73, 0.08)');
+        skyGradient.addColorStop(0.65, 'rgba(15, 63, 73, 0.22)');
+        skyGradient.addColorStop(1, 'rgba(8, 38, 44, 0.45)');
+        ctx.fillStyle = skyGradient;
+        ctx.fillRect(0, 0, width, height);
+
+        // Harmonic multi-layer ocean swell waves (deep gravity simulation)
+        const layers = [
+          { yRatio: 0.42, amp: 14, freq: 0.0032, speed: 0.65, color: 'rgba(15, 63, 73, 0.12)', stroke: 'rgba(15, 63, 73, 0.25)' },
+          { yRatio: 0.54, amp: 22, freq: 0.0026, speed: 0.85, color: 'rgba(11, 48, 56, 0.18)', stroke: 'rgba(82, 167, 181, 0.2)' },
+          { yRatio: 0.68, amp: 34, freq: 0.0021, speed: 1.1, color: 'rgba(15, 63, 73, 0.26)', stroke: 'rgba(236, 230, 223, 0.35)' },
+          // Colossal mountain-wave silhouette (The iconic Interstellar gargantuan wave)
+          { yRatio: 0.82, amp: 50, freq: 0.0017, speed: 1.35, color: 'rgba(8, 38, 44, 0.42)', stroke: 'rgba(236, 230, 223, 0.55)' }
+        ];
+
+        layers.forEach((layer, layerIdx) => {
+          ctx.beginPath();
+          const baseHeight = height * layer.yRatio;
+          ctx.moveTo(0, height);
+          ctx.lineTo(0, baseHeight);
+
+          for (let x = 0; x <= width; x += 6) {
+            // Complex harmonic superposition for authentic organic water motion
+            const w1 = Math.sin(x * layer.freq + time * layer.speed) * layer.amp;
+            const w2 = Math.cos(x * layer.freq * 2.1 - time * layer.speed * 0.75) * (layer.amp * 0.45);
+            const w3 = Math.sin(x * 0.0006 + time * 0.35) * (layer.amp * 0.8);
+            const y = baseHeight + w1 + w2 + w3;
+            ctx.lineTo(x, y);
+          }
+
+          ctx.lineTo(width, height);
+          ctx.closePath();
+          ctx.fillStyle = layer.color;
+          ctx.fill();
+
+          // Wave crest highlights and foam shimmer
+          ctx.strokeStyle = layer.stroke;
+          ctx.lineWidth = layerIdx === layers.length - 1 ? 1.8 : 1.2;
+          ctx.stroke();
+        });
+
+        // Atmospheric sea spray & moisture particulates
+        ctx.fillStyle = 'rgba(236, 230, 223, 0.4)';
+        for (let i = 0; i < 28; i++) {
+          const px = (Math.sin(i * 189.2 + time * 0.5) * 0.5 + 0.5) * width;
+          const py = height * 0.55 + Math.cos(i * 67.3 + time * 0.75) * (height * 0.3);
+          const pSize = (Math.sin(time + i) * 0.5 + 0.5) * 2 + 1;
+          ctx.beginPath();
+          ctx.arc(px, py, pSize, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(renderOcean);
+      }
+
+      renderOcean();
+    }
+
+    initInterstellarOcean();
+
+    // IntersectionObserver: Pause rendering completely when scrolled past hero
+    if (heroSection && splineCanvas) {
+      const heroSplineObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          isHeroInView = entry.isIntersecting;
+          if (isHeroInView && !document.hidden) {
+            splineCanvas.style.visibility = 'visible';
+          } else {
+            splineCanvas.style.visibility = 'hidden';
+          }
+        });
+      }, { threshold: 0.05 });
+
+      heroSplineObserver.observe(heroSection);
+    }
+
+    // Page Visibility API: Stop GPU render loop when tab is in background or phone screen is locked
+    document.addEventListener('visibilitychange', () => {
+      if (splineCanvas) {
+        if (!document.hidden && isHeroInView) {
+          splineCanvas.style.visibility = 'visible';
+        } else {
+          splineCanvas.style.visibility = 'hidden';
+        }
+      }
+    });
+
+    // -------------------------------------------------------------------------
+    // 3. DESKTOP BENTO SPOTLIGHT EFFECT
+    // -------------------------------------------------------------------------
+    document.querySelectorAll('.bento-spotlight').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+      });
+    });
+
+    // -------------------------------------------------------------------------
+    // 4. CATALOG TABS SWITCHING
+    // -------------------------------------------------------------------------
+    function switchCatalogTab(tab) {
+      const tabWebs = document.getElementById('catalogTabWebs');
+      const tabIa = document.getElementById('catalogTabIa');
+      const btnWebs = document.getElementById('tabBtnWebs');
+      const btnIa = document.getElementById('tabBtnIa');
+
+      if (tab === 'webs') {
+        tabWebs.classList.remove('hidden');
+        tabIa.classList.add('hidden');
+        btnWebs.className = 'px-4 sm:px-6 py-2.5 rounded-xl bg-[#0F3F49] text-[#ECE6DF] font-bold transition-all shadow-md';
+        btnIa.className = 'px-4 sm:px-6 py-2.5 rounded-xl text-[#0F3F49]/70 hover:text-[#0F3F49] transition-all';
+      } else {
+        tabWebs.classList.add('hidden');
+        tabIa.classList.remove('hidden');
+        btnIa.className = 'px-4 sm:px-6 py-2.5 rounded-xl bg-[#0F3F49] text-[#ECE6DF] font-bold transition-all shadow-md';
+        btnWebs.className = 'px-4 sm:px-6 py-2.5 rounded-xl text-[#0F3F49]/70 hover:text-[#0F3F49] transition-all';
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 5. CORPORATE LANGUAGE TOGGLE (Español $490 vs Bilingüe $750)
+    // -------------------------------------------------------------------------
+    let corporateIsBilingual = false;
+
+    function setCorporateLanguage(isBilingual) {
+      corporateIsBilingual = isBilingual;
+      const priceDisplay = document.getElementById('corporatePriceDisplay');
+      const btnEs = document.getElementById('btnCorporateEs');
+      const btnEn = document.getElementById('btnCorporateEn');
+
+      if (isBilingual) {
+        priceDisplay.innerText = '$750';
+        btnEn.className = 'flex-1 py-1.5 rounded-lg bg-[#0F3F49] text-[#ECE6DF] font-bold transition-all';
+        btnEs.className = 'flex-1 py-1.5 rounded-lg text-[#0F3F49]/70 hover:text-[#0F3F49] transition-all';
+      } else {
+        priceDisplay.innerText = '$490';
+        btnEs.className = 'flex-1 py-1.5 rounded-lg bg-[#0F3F49] text-[#ECE6DF] font-bold transition-all';
+        btnEn.className = 'flex-1 py-1.5 rounded-lg text-[#0F3F49]/70 hover:text-[#0F3F49] transition-all';
+      }
+
+      // If product 3 is currently selected, update its price in quoter
+      if (selectedProducts['3']) {
+        selectedProducts['3'].name = isBilingual ? 'Tessa Corporate (Bilingüe EN-ES)' : 'Tessa Corporate (Español)';
+        selectedProducts['3'].initialPrice = isBilingual ? 750 : 490;
+        updateQuoterUI();
+      }
+    }
+
+    function toggleSelectCorporateProduct() {
+      const price = corporateIsBilingual ? 750 : 490;
+      const name = corporateIsBilingual ? 'Tessa Corporate (Bilingüe EN-ES)' : 'Tessa Corporate (Español)';
+      toggleSelectProduct(3, name, price, 0);
+    }
+
+    // -------------------------------------------------------------------------
+    // 6. CUSTOM ELITE AUTOMATION SELECTOR
+    // -------------------------------------------------------------------------
+    let eliteAutomationType = 'carbon';
+
+    function updateEliteAutomation() {
+      const select = document.getElementById('selectEliteAutomation');
+      const priceDisplay = document.getElementById('customElitePriceDisplay');
+      eliteAutomationType = select.value;
+
+      let price = 890;
+      let label = 'Carbon ERP';
+      if (eliteAutomationType === 'booking') {
+        price = 890;
+        label = 'Agendamiento Automatizado';
+      } else if (eliteAutomationType === 'frigate') {
+        price = 1200;
+        label = 'Frigate Local Cámaras IA';
+      }
+
+      priceDisplay.innerText = `$${price}`;
+
+      if (selectedProducts['5']) {
+        selectedProducts['5'].name = `Tessa Custom Elite (${label})`;
+        selectedProducts['5'].initialPrice = price;
+        updateQuoterUI();
+      }
+    }
+
+    function toggleSelectEliteProduct() {
+      const select = document.getElementById('selectEliteAutomation');
+      let price = 890;
+      let label = 'Carbon ERP';
+      if (select.value === 'booking') {
+        price = 890;
+        label = 'Agendamiento Automatizado';
+      } else if (select.value === 'frigate') {
+        price = 1200;
+        label = 'Frigate Local Cámaras IA';
+      }
+      toggleSelectProduct(5, `Tessa Custom Elite (${label})`, price, 80);
+    }
+
+    // -------------------------------------------------------------------------
+    // 7. INTERACTIVE QUOTER ENGINE (STATE & LOGIC)
+    // -------------------------------------------------------------------------
+    const selectedProducts = {};
+    const selectedAddons = {};
+
+    function toggleSelectProduct(prodId, name, initialPrice, monthlyPrice) {
+      const card = document.getElementById(`cardProduct${prodId}`);
+      const btn = card.querySelector('.btn-toggle-product');
+
+      if (selectedProducts[prodId]) {
+        delete selectedProducts[prodId];
+        card.classList.remove('is-selected');
+        btn.innerHTML = `<i data-lucide="plus" class="w-3.5 h-3.5"></i><span>Agregar a mi cotización</span>`;
+      } else {
+        selectedProducts[prodId] = {
+          id: prodId,
+          name: name,
+          initialPrice: initialPrice,
+          monthlyPrice: monthlyPrice
+        };
+        card.classList.add('is-selected');
+        const isEliteCard = prodId === 5;
+        const accentClass = isEliteCard ? 'text-[#0F3F49] font-bold' : (btn.classList.contains('magnetic-primary') ? 'text-[#ECE6DF] font-bold' : 'text-[#7F0508] font-bold');
+        btn.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 ${accentClass}"></i><span class="${accentClass}">✓ Seleccionado</span>`;
+      }
+      lucide.createIcons();
+      updateQuoterUI();
+    }
+
+    function toggleProductAddon(prodId, addonKey, initialPrice, addonName, monthlyPrice = 0) {
+      const addonId = `${prodId}_${addonKey}`;
+      const checkbox = document.getElementById(`addonProduct${prodId}${addonKey.charAt(0).toUpperCase() + addonKey.slice(1)}`);
+
+      if (checkbox && checkbox.checked) {
+        selectedAddons[addonId] = {
+          name: addonName,
+          initialPrice: initialPrice,
+          monthlyPrice: monthlyPrice
+        };
+      } else {
+        delete selectedAddons[addonId];
+      }
+      updateQuoterUI();
+    }
+
+    function resetQuotation() {
+      Object.keys(selectedProducts).forEach(id => {
+        delete selectedProducts[id];
+        const card = document.getElementById(`cardProduct${id}`);
+        if (card) {
+          card.classList.remove('is-selected');
+          const btn = card.querySelector('.btn-toggle-product');
+          if (btn) btn.innerHTML = `<i data-lucide="plus" class="w-3.5 h-3.5"></i><span>Agregar a mi cotización</span>`;
+        }
+      });
+
+      Object.keys(selectedAddons).forEach(k => delete selectedAddons[k]);
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+
+      lucide.createIcons();
+      updateQuoterUI();
+    }
+
+    function updateQuoterUI() {
+      let totalInitial = 0;
+      let totalMonthly = 0;
+      const itemsList = [];
+
+      Object.values(selectedProducts).forEach(p => {
+        totalInitial += p.initialPrice;
+        totalMonthly += p.monthlyPrice;
+        itemsList.push({
+          title: p.name,
+          initial: p.initialPrice,
+          monthly: p.monthlyPrice
+        });
+      });
+
+      Object.values(selectedAddons).forEach(a => {
+        totalInitial += a.initialPrice;
+        totalMonthly += a.monthlyPrice;
+        itemsList.push({
+          title: `Add-on: ${a.name}`,
+          initial: a.initialPrice,
+          monthly: a.monthlyPrice
+        });
+      });
+
+      const count = itemsList.length;
+
+      // Update Floating Bar
+      const countEl = document.getElementById('barItemCount');
+      const initialTotalEl = document.getElementById('barInitialTotal');
+      const monthlyTotalEl = document.getElementById('barMonthlyTotal');
+
+      if (countEl) countEl.innerText = `${count} ${count === 1 ? 'SERVICIO SELECCIONADO' : 'SERVICIOS SELECCIONADOS'}`;
+      if (initialTotalEl) initialTotalEl.innerText = `$${totalInitial}`;
+
+      if (monthlyTotalEl) {
+        if (totalMonthly > 0) {
+          monthlyTotalEl.innerText = `+ $${totalMonthly}/mes`;
+          monthlyTotalEl.classList.remove('hidden');
+        } else {
+          monthlyTotalEl.classList.add('hidden');
+        }
+      }
+
+      // Update Popup Modal
+      const popupList = document.getElementById('popupSelectedList');
+      const popupInitial = document.getElementById('popupInitialTotal');
+      const popupMonthly = document.getElementById('popupMonthlyTotal');
+
+      if (popupInitial) popupInitial.innerText = `$${totalInitial} USD`;
+      if (popupMonthly) popupMonthly.innerText = `$${totalMonthly} USD / mes`;
+
+      if (popupList) {
+        if (count === 0) {
+          popupList.innerHTML = `<div class="text-center py-6 text-[#0F3F49]/50">No has seleccionado ningún servicio aún.</div>`;
+        } else {
+          let listHtml = '';
+          itemsList.forEach(item => {
+            listHtml += `
+              <div class="flex items-center justify-between py-2 border-b border-[#0F3F49]/10">
+                <span class="text-[#0F3F49] font-medium">${item.title}</span>
+                <span class="text-[#7F0508] font-bold">$${item.initial} ${item.monthly > 0 ? `(+$${item.monthly}/mes)` : ''}</span>
+              </div>
+            `;
+          });
+          popupList.innerHTML = listHtml;
+        }
+      }
+
+      // Build WhatsApp URL
+      buildWhatsAppQuotationUrl(itemsList, totalInitial, totalMonthly);
+    }
+
+    function toggleDetailsPopup() {
+      const popup = document.getElementById('detailsPopup');
+      if (popup) {
+        if (popup.classList.contains('hidden')) {
+          popup.classList.remove('hidden');
+          popup.classList.add('flex');
+        } else {
+          popup.classList.add('hidden');
+          popup.classList.remove('flex');
+        }
+      }
+    }
+
+    // -------------------------------------------------------------------------
+    // 8. WHATSAPP LINK BUILDER
+    // -------------------------------------------------------------------------
+    let currentOwnerPhone = localStorage.getItem('tessa_phone_target') || localStorage.getItem('jota_phone_target') || '584120000000';
+
+    function saveOwnerPhoneNumber(number) {
+      currentOwnerPhone = number.replace(/[^0-9]/g, '') || '584120000000';
+      localStorage.setItem('tessa_phone_target', currentOwnerPhone);
+      updateQuoterUI();
+      updatePhoneStatusText();
+    }
+
+    function updatePhoneStatusText() {
+      const notice = document.getElementById('phoneStatusNotice');
+      if (notice) {
+        notice.innerText = `✅ Vinculado a: +${currentOwnerPhone}`;
+        notice.className = 'text-xs text-[#0F3F49] mt-1.5 font-bold';
+      }
+    }
+
+    function buildWhatsAppQuotationUrl(itemsList, totalInitial, totalMonthly) {
+      const submitBtn = document.getElementById('btnSendWhatsAppQuotation');
+      if (!submitBtn) return;
+
+      let msg = `⚡ *SOLICITUD DE COTIZACIÓN — TESSA LABS*\n`;
+      msg += `━━━━━━━━━━━━━━━━━━━━━\n`;
+
+      if (itemsList.length === 0) {
+        msg += `¡Hola equipo de Tessa Labs! 👋 Quisiera solicitar información y asesoría sobre sus servicios de ingeniería web, catálogos WhatsApp y automatizaciones con IA.\n`;
+      } else {
+        msg += `He armado la siguiente selección en su plataforma web:\n\n`;
+        itemsList.forEach((item, index) => {
+          msg += ` ${index + 1}. *${item.title}*\n`;
+          msg += `    • Inversión: $${item.initial} USD ${item.monthly > 0 ? `(+ $${item.monthly}/mes)` : ''}\n`;
+        });
+        msg += `\n💰 *Total Inversión Inicial:* $${totalInitial} USD\n`;
+        if (totalMonthly > 0) {
+          msg += `🔄 *Mantenimiento Mensual:* $${totalMonthly} USD / mes\n`;
+        }
+        msg += `━━━━━━━━━━━━━━━━━━━━━\n`;
+        msg += `¿Podríamos coordinar los detalles técnicos y disponibilidad para iniciar? Muchas gracias.`;
+      }
+
+      submitBtn.href = `https://wa.me/${currentOwnerPhone}?text=${encodeURIComponent(msg)}`;
+    }
+
+    // -------------------------------------------------------------------------
+    // 9. INITIAL BOOTSTRAP
+    // -------------------------------------------------------------------------
+    if (currentOwnerPhone) {
+      const phoneInput = document.getElementById('ownerPhoneInput');
+      if (phoneInput) phoneInput.value = currentOwnerPhone;
+      updatePhoneStatusText();
+    }
+
+    updateQuoterUI();
+  </script>
+</body>
+</html>
