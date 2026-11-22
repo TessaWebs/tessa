@@ -298,16 +298,10 @@
   <header class="fixed top-3.5 sm:top-5 inset-x-0 z-40 flex justify-center px-4">
     <nav class="w-full max-w-4xl bg-white/80 backdrop-blur-2xl border border-[#0F3F49]/15 rounded-full px-4 sm:px-6 py-2 flex items-center justify-between shadow-[0_12px_40px_rgba(15,63,73,0.06)] transition-all">
       
-      <!-- Brand & Emblem (Left Anchor: flex-1 ensures perfect mathematical centering) -->
+      <!-- Brand & Logo (Official Tessa Labs Logo with Emblem) -->
       <div class="flex-1 flex items-center justify-start">
-        <a href="#" class="flex items-center gap-2.5 group">
-          <div class="w-8 h-8 rounded-full overflow-hidden border border-[#0F3F49]/20 bg-[#ECE6DF] p-0.5 group-hover:border-[#7F0508] transition-colors shrink-0">
-            <img src="assets/tessa/tessa-emblem-concrete.jpg" alt="TESSA Emblem" class="w-full h-full object-contain">
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="font-display font-extrabold text-lg tracking-[-0.03em] text-[#0F3F49] group-hover:text-[#7F0508] transition-colors">TESSA</span>
-            <span class="text-[9px] font-mono tracking-widest uppercase bg-[#7F0508]/10 border border-[#7F0508]/25 px-2 py-0.5 rounded-full text-[#7F0508] font-bold">LABS</span>
-          </div>
+        <a href="#" class="flex items-center group transition-transform duration-200 hover:scale-[1.02]" title="TESSA LABS">
+          <img src="assets/tessa/tessa-logo-transparent.png" alt="TESSA LABS" class="h-8 sm:h-9 w-auto object-contain">
         </a>
       </div>
 
@@ -365,24 +359,26 @@
       <!-- Left Column: Typography & Positioning (7 Cols) -->
       <div class="lg:col-span-7 z-20 flex flex-col items-start text-left">
         
-        <!-- Technical Status Badge -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0F3F49]/[0.05] border border-[#0F3F49]/15 text-[#0F3F49] text-[10px] sm:text-[11px] font-mono tracking-widest uppercase mb-3 sm:mb-4">
-          <span class="w-2 h-2 rounded-full bg-[#7F0508] ring-2 ring-[#7F0508]/40 animate-pulse"></span>
-          <span>● TESSA LABS — WEB & AI ARCHITECTURE</span>
+        <!-- Brand Badge with Official Logo & Emblem -->
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#0F3F49]/[0.05] border border-[#0F3F49]/15 text-[#0F3F49] mb-4 sm:mb-5">
+          <img src="assets/tessa/tessa-logo-transparent.png" alt="TESSA LABS" class="h-4 sm:h-5 w-auto object-contain">
+          <span class="text-[#0F3F49]/20">|</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-[#7F0508] ring-2 ring-[#7F0508]/40 animate-pulse"></span>
+          <span class="text-[10px] sm:text-[11px] font-mono tracking-widest uppercase font-semibold text-[#0F3F49]/80">WEB & AI ARCHITECTURE</span>
         </div>
 
         <!-- Giant Fluid H1 mixing Space Grotesk / Syne and Instrument Serif Italic -->
-        <h1 class="fluid-h1 font-display font-extrabold text-[#0F3F49] mb-3 sm:mb-4 max-w-2xl">
+        <h1 class="fluid-h1 font-display font-extrabold text-[#0F3F49] mb-5 sm:mb-4 max-w-2xl">
           Ingeniería Web, <span class="font-serif italic font-normal text-[#7F0508]">Catálogos</span> & Sistemas de <span class="font-serif italic font-normal text-[#7F0508]">IA</span> que venden solos.
         </h1>
 
         <!-- High-Velocity Subtitle -->
-        <p class="text-xs sm:text-sm text-[#0F3F49]/75 max-w-xl font-normal leading-relaxed mb-6 sm:mb-7 font-sans">
+        <p class="hidden sm:block text-xs sm:text-sm text-[#0F3F49]/75 max-w-xl font-normal leading-relaxed mb-6 sm:mb-7 font-sans">
           Desarrollamos infraestructura web ultrarrápida, catálogos e-commerce con cálculo de Tasa BCV automática y agentes autónomos de IA que cierran ventas en WhatsApp sin pagar mensualidades de plataforma.
         </p>
 
         <!-- Dual CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto mb-6 sm:mb-8">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto">
           
           <a href="#catalogo" class="magnetic-primary inline-flex items-center justify-center gap-2 px-6 py-3 sm:px-7 sm:py-3.5 rounded-full font-sans font-bold text-xs sm:text-sm tracking-tight group shadow-[0_4px_20px_rgba(15,63,73,0.18)]">
             <i data-lucide="layers" class="w-4 h-4 fill-current"></i>
@@ -395,22 +391,6 @@
             <span>Ver Arquitectura vs Apps</span>
           </a>
 
-        </div>
-
-        <!-- Metric Anchors -->
-        <div class="grid grid-cols-3 gap-4 sm:gap-6 pt-3.5 sm:pt-4 border-t border-[#0F3F49]/15 w-full max-w-md font-mono">
-          <div>
-            <div class="text-xl sm:text-2xl font-bold font-display text-[#0F3F49]">&lt;0.4s</div>
-            <div class="text-[9px] sm:text-[10px] text-[#0F3F49]/60 tracking-wider uppercase mt-0.5">Carga Inicial 5G</div>
-          </div>
-          <div>
-            <div class="text-xl sm:text-2xl font-bold font-display text-[#7F0508]">1-Clic</div>
-            <div class="text-[9px] sm:text-[10px] text-[#0F3F49]/60 tracking-wider uppercase mt-0.5">Checkout WhatsApp</div>
-          </div>
-          <div>
-            <div class="text-xl sm:text-2xl font-bold font-display text-[#0F3F49]">0%</div>
-            <div class="text-[9px] sm:text-[10px] text-[#0F3F49]/60 tracking-wider uppercase mt-0.5">Comisiones de Venta</div>
-          </div>
         </div>
 
       </div>
@@ -521,7 +501,7 @@
         Deja de pagar alquiler mensual. <br class="hidden sm:inline">
         <span class="font-serif italic font-normal text-[#7F0508]">Sé dueño de tu propia infraestructura digital.</span>
       </h2>
-      <p class="text-xs sm:text-sm text-[#0F3F49]/75 font-mono leading-relaxed mb-4 sm:mb-0">
+      <p class="hidden sm:block text-xs sm:text-sm text-[#0F3F49]/75 font-mono leading-relaxed mb-4 sm:mb-0">
         El modelo tradicional de aplicaciones te atrapa en rentas perpetuas o tarifas infladas de agencias lentas. En TESSA diseñamos plataformas independientes que te pertenecen para siempre:
       </p>
       <!-- Indicador visual de deslizamiento móvil -->
@@ -693,7 +673,7 @@
       </div>
 
       <div class="max-w-md">
-        <p class="text-xs sm:text-sm text-[#0F3F49]/70 font-mono leading-relaxed">
+        <p class="hidden sm:block text-xs sm:text-sm text-[#0F3F49]/70 font-mono leading-relaxed">
           Comprueba la velocidad extrema, la estética y el flujo de compra en proyectos activos desarrollados por TESSA. Haz clic para probar la experiencia en vivo.
         </p>
         <!-- Indicador visual de deslizamiento móvil -->
@@ -931,7 +911,7 @@
       </div>
 
       <div class="max-w-md">
-        <p class="text-xs sm:text-sm text-zinc-400 font-mono leading-relaxed">
+        <p class="hidden sm:block text-xs sm:text-sm text-zinc-400 font-mono leading-relaxed">
           Elige el paquete ideal para tu negocio. Sé dueño absoluto de tu infraestructura digital sin mensualidades de alquiler ni comisiones por ventas.
         </p>
         <!-- Indicador visual de deslizamiento móvil -->
