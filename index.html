@@ -190,45 +190,35 @@
       scrollbar-width: none;
     }
 
-    /* Mobile Carousel Snap & Width Styles */
+    /* Mobile Carousel Snap, Fluidity & Peek Styles */
     @media (max-width: 1023px) {
-      .mobile-carousel-sec1 {
-        display: flex !important;
-        flex-direction: row !important;
-        overflow-x: auto !important;
-        scroll-snap-type: x mandatory !important;
-        -webkit-overflow-scrolling: touch !important;
-        padding-left: 1.25rem !important;
-        padding-right: 1.25rem !important;
-        padding-bottom: 1.5rem !important;
-        padding-top: 0.5rem !important;
-        gap: 1.25rem !important;
-        margin-left: -1rem !important;
-        margin-right: -1rem !important;
-      }
-      .mobile-carousel-sec1 > * {
-        flex: 0 0 86vw !important;
-        max-width: 360px !important;
-        scroll-snap-align: center !important;
-      }
+      .mobile-carousel-sec1,
       .mobile-carousel-sec2 {
         display: flex !important;
         flex-direction: row !important;
         overflow-x: auto !important;
         scroll-snap-type: x mandatory !important;
+        scroll-behavior: smooth !important;
         -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior-x: contain !important;
         padding-left: 1.25rem !important;
-        padding-right: 1.25rem !important;
-        padding-bottom: 1.5rem !important;
+        padding-right: 2.5rem !important;
+        padding-bottom: 1.25rem !important;
         padding-top: 0.5rem !important;
         gap: 1.25rem !important;
         margin-left: -1rem !important;
         margin-right: -1rem !important;
+        scroll-padding-left: 1.25rem !important;
+      }
+      .mobile-carousel-sec1 > * {
+        flex: 0 0 78vw !important;
+        max-width: 330px !important;
+        scroll-snap-align: start !important;
       }
       .mobile-carousel-sec2 > * {
-        flex: 0 0 88vw !important;
-        max-width: 440px !important;
-        scroll-snap-align: center !important;
+        flex: 0 0 82vw !important;
+        max-width: 380px !important;
+        scroll-snap-align: start !important;
       }
     }
 
@@ -238,19 +228,22 @@
         flex-direction: row !important;
         overflow-x: auto !important;
         scroll-snap-type: x mandatory !important;
+        scroll-behavior: smooth !important;
         -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior-x: contain !important;
         padding-left: 1.25rem !important;
-        padding-right: 1.25rem !important;
-        padding-bottom: 1.5rem !important;
-        padding-top: 1rem !important;
+        padding-right: 2.5rem !important;
+        padding-bottom: 1.25rem !important;
+        padding-top: 0.75rem !important;
         gap: 1.25rem !important;
         margin-left: -1rem !important;
         margin-right: -1rem !important;
+        scroll-padding-left: 1.25rem !important;
       }
       .mobile-carousel-sec3 > * {
-        flex: 0 0 84vw !important;
-        max-width: 330px !important;
-        scroll-snap-align: center !important;
+        flex: 0 0 78vw !important;
+        max-width: 310px !important;
+        scroll-snap-align: start !important;
       }
     }
 
@@ -513,10 +506,13 @@
         El modelo tradicional de aplicaciones te atrapa en rentas perpetuas o tarifas infladas de agencias lentas. En TESSA diseñamos plataformas independientes que te pertenecen para siempre:
       </p>
       <!-- Indicador visual de deslizamiento móvil -->
-      <div class="flex lg:hidden items-center justify-center gap-1.5 text-[11px] font-mono text-[#0F3F49]/60 mt-3">
-        <i data-lucide="arrow-left" class="w-3.5 h-3.5 animate-pulse"></i>
-        <span>Desliza para comparar</span>
-        <i data-lucide="arrow-right" class="w-3.5 h-3.5 animate-pulse"></i>
+      <div class="inline-flex lg:hidden items-center gap-2 px-3 py-1.5 rounded-full bg-[#0F3F49]/[0.06] border border-[#0F3F49]/15 text-[#0F3F49] text-[11px] font-mono mt-3 shadow-sm">
+        <span class="flex h-2 w-2 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7F0508] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-[#7F0508]"></span>
+        </span>
+        <span class="font-bold">Carrusel interactivo:</span>
+        <span class="text-[#0F3F49]/70">Desliza ➔</span>
       </div>
     </div>
 
@@ -660,6 +656,23 @@
 
     </div>
 
+    <!-- Controles de Carrusel Móvil (Sec 1) -->
+    <div class="flex lg:hidden items-center justify-between mt-4 px-2 select-none">
+      <div class="flex items-center gap-1.5 font-mono text-[11px] text-[#0F3F49]/70">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
+        <span id="label-sec1">1 de 3</span>
+      </div>
+      <div class="flex items-center gap-1.5" id="dots-sec1"></div>
+      <div class="flex items-center gap-2">
+        <button type="button" onclick="scrollCarousel('mobile-carousel-sec1', -1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Anterior">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+        </button>
+        <button type="button" onclick="scrollCarousel('mobile-carousel-sec1', 1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Siguiente">
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
   </section>
 
   <!-- ========================================================================= -->
@@ -685,10 +698,13 @@
           Comprueba la velocidad extrema, la estética y el flujo de compra en proyectos activos desarrollados por TESSA. Haz clic para probar la experiencia en vivo.
         </p>
         <!-- Indicador visual de deslizamiento móvil -->
-        <div class="flex lg:hidden items-center gap-1.5 text-[11px] font-mono text-[#7F0508] mt-2">
-          <i data-lucide="arrow-left" class="w-3.5 h-3.5 animate-pulse"></i>
-          <span>Desliza para ver más proyectos</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5 animate-pulse"></i>
+        <div class="inline-flex lg:hidden items-center gap-2 px-3 py-1.5 rounded-full bg-[#0F3F49]/[0.06] border border-[#0F3F49]/15 text-[#0F3F49] text-[11px] font-mono mt-3 shadow-sm">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7F0508] opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#7F0508]"></span>
+          </span>
+          <span class="font-bold">Carrusel interactivo:</span>
+          <span class="text-[#0F3F49]/70">Desliza ➔</span>
         </div>
       </div>
     </div>
@@ -898,6 +914,23 @@
 
     </div>
 
+    <!-- Controles de Carrusel Móvil (Sec 2) -->
+    <div class="flex lg:hidden items-center justify-between mt-4 px-2 select-none">
+      <div class="flex items-center gap-1.5 font-mono text-[11px] text-[#0F3F49]/70">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
+        <span id="label-sec2">1 de 2</span>
+      </div>
+      <div class="flex items-center gap-1.5" id="dots-sec2"></div>
+      <div class="flex items-center gap-2">
+        <button type="button" onclick="scrollCarousel('mobile-carousel-sec2', -1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Anterior">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+        </button>
+        <button type="button" onclick="scrollCarousel('mobile-carousel-sec2', 1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Siguiente">
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
   </section>
 
   <!-- ========================================================================= -->
@@ -923,10 +956,13 @@
           Elige el paquete ideal para tu negocio. Sé dueño absoluto de tu infraestructura digital sin mensualidades de alquiler ni comisiones por ventas.
         </p>
         <!-- Indicador visual de deslizamiento móvil -->
-        <div class="flex md:hidden items-center gap-1.5 text-[11px] font-mono text-emerald-400 mt-2">
-          <i data-lucide="arrow-left" class="w-3.5 h-3.5 animate-pulse"></i>
-          <span>Desliza para explorar paquetes</span>
-          <i data-lucide="arrow-right" class="w-3.5 h-3.5 animate-pulse"></i>
+        <div class="inline-flex md:hidden items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-[11px] font-mono mt-3 shadow-sm">
+          <span class="flex h-2 w-2 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+          </span>
+          <span class="font-bold">Carrusel interactivo (4 planes):</span>
+          <span class="text-emerald-400/80">Desliza ➔</span>
         </div>
       </div>
     </div>
@@ -1175,6 +1211,23 @@
         </button>
       </div>
 
+    </div>
+
+    <!-- Controles de Carrusel Móvil (Sec 3) -->
+    <div class="flex md:hidden items-center justify-between mt-4 px-2 select-none">
+      <div class="flex items-center gap-1.5 font-mono text-[11px] text-zinc-400">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span id="label-sec3">1 de 4</span>
+      </div>
+      <div class="flex items-center gap-1.5" id="dots-sec3"></div>
+      <div class="flex items-center gap-2">
+        <button type="button" onclick="scrollCarousel('mobile-carousel-sec3', -1)" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white shadow-sm active:scale-95 transition-all" aria-label="Anterior">
+          <i data-lucide="chevron-left" class="w-4 h-4"></i>
+        </button>
+        <button type="button" onclick="scrollCarousel('mobile-carousel-sec3', 1)" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white shadow-sm active:scale-95 transition-all" aria-label="Siguiente">
+          <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </button>
+      </div>
     </div>
 
   </section>
@@ -1859,6 +1912,95 @@
     }
 
     // -------------------------------------------------------------------------
+    // 8.5. FLUID MOBILE CAROUSEL CONTROLLER
+    // -------------------------------------------------------------------------
+    function initMobileCarousel(carouselClass, dotsId, labelId, theme = 'light') {
+      const carousel = document.querySelector('.' + carouselClass);
+      const dotsContainer = document.getElementById(dotsId);
+      const label = document.getElementById(labelId);
+      if (!carousel || !dotsContainer) return;
+
+      const items = Array.from(carousel.children);
+      const total = items.length;
+      if (total === 0) return;
+
+      dotsContainer.innerHTML = '';
+
+      const activeColor = theme === 'dark' ? 'bg-emerald-400 w-5' : 'bg-[#7F0508] w-5';
+      const inactiveColor = theme === 'dark' ? 'bg-white/20 w-2' : 'bg-[#0F3F49]/20 w-2';
+
+      for (let i = 0; i < total; i++) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Ir a slide ${i + 1}`);
+        dot.className = `h-2 rounded-full transition-all duration-300 ${i === 0 ? activeColor : inactiveColor}`;
+        dot.addEventListener('click', () => {
+          items[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+        });
+        dotsContainer.appendChild(dot);
+      }
+
+      function updateActiveSlide() {
+        const containerLeft = carousel.getBoundingClientRect().left;
+        let closestIndex = 0;
+        let minDiff = Infinity;
+
+        items.forEach((item, index) => {
+          const itemRect = item.getBoundingClientRect();
+          const diff = Math.abs(itemRect.left - containerLeft);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestIndex = index;
+          }
+        });
+
+        const dots = dotsContainer.children;
+        for (let i = 0; i < dots.length; i++) {
+          if (i === closestIndex) {
+            dots[i].className = `h-2 rounded-full transition-all duration-300 ${activeColor}`;
+          } else {
+            dots[i].className = `h-2 rounded-full transition-all duration-300 ${inactiveColor}`;
+          }
+        }
+
+        if (label) {
+          label.innerText = `${closestIndex + 1} de ${total}`;
+        }
+      }
+
+      let isTicking = false;
+      carousel.addEventListener('scroll', () => {
+        if (!isTicking) {
+          window.requestAnimationFrame(() => {
+            updateActiveSlide();
+            isTicking = false;
+          });
+          isTicking = true;
+        }
+      }, { passive: true });
+    }
+
+    function scrollCarousel(carouselClass, direction) {
+      const carousel = document.querySelector('.' + carouselClass);
+      if (!carousel) return;
+      const items = Array.from(carousel.children);
+      const containerLeft = carousel.getBoundingClientRect().left;
+
+      let currentIndex = 0;
+      let minDiff = Infinity;
+      items.forEach((item, index) => {
+        const diff = Math.abs(item.getBoundingClientRect().left - containerLeft);
+        if (diff < minDiff) {
+          minDiff = diff;
+          currentIndex = index;
+        }
+      });
+
+      const nextIndex = Math.max(0, Math.min(items.length - 1, currentIndex + direction));
+      items[nextIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    }
+
+    // -------------------------------------------------------------------------
     // 9. INITIAL BOOTSTRAP
     // -------------------------------------------------------------------------
     if (currentOwnerPhone) {
@@ -1868,6 +2010,14 @@
     }
 
     updateQuoterUI();
+
+    // Inicializar carruseles móviles interactivos
+    initMobileCarousel('mobile-carousel-sec1', 'dots-sec1', 'label-sec1', 'light');
+    initMobileCarousel('mobile-carousel-sec2', 'dots-sec2', 'label-sec2', 'light');
+    initMobileCarousel('mobile-carousel-sec3', 'dots-sec3', 'label-sec3', 'dark');
+    if (typeof lucide !== 'undefined' && lucide.createIcons) {
+      lucide.createIcons();
+    }
   </script>
 </body>
 </html>
