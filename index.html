@@ -6,10 +6,15 @@
   <title>TESSA LABS — Ingeniería Web, Catálogos WhatsApp & Arquitectura IA</title>
   <meta name="description" content="TESSA LABS: Estudio de ingeniería web, catálogos e-commerce con checkout directo a WhatsApp y automatizaciones de IA autónomas sin comisiones ni rentas.">
 
+  <!-- Preconnect Fontshare for Satoshi Font -->
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,401,500,700,900&display=swap" rel="stylesheet">
+
   <!-- Preconnect Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -57,11 +62,11 @@
             }
           },
           fontFamily: {
-            display: ['"Space Grotesk"', '"Syne"', 'sans-serif'],
-            serif: ['"Instrument Serif"', 'serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            tessa: ['"Space Grotesk"', 'sans-serif']
+            display: ['"Satoshi"', 'sans-serif'],
+            serif: ['"Instrument Serif"', '"Satoshi"', 'serif'],
+            mono: ['"Satoshi"', '"JetBrains Mono"', 'monospace'],
+            sans: ['"Satoshi"', 'sans-serif'],
+            tessa: ['"Satoshi"', 'sans-serif']
           },
           animation: {
             'marquee': 'marquee 32s linear infinite',
@@ -135,10 +140,30 @@
       pointer-events: none !important;
     }
 
+    /* Satoshi Light Universal Typography Across Entire Page */
+    *, html, body {
+      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    html, body {
+      font-weight: 300 !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Satoshi', sans-serif !important;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+    }
+    .font-extrabold {
+      font-weight: 300 !important;
+    }
+
     /* Fluid Typography */
     .fluid-h1 {
+      font-family: 'Satoshi', sans-serif !important;
+      font-weight: 300 !important;
       font-size: clamp(2rem, 3.5vw + 0.5rem, 3.85rem);
-      line-height: 1.03;
+      line-height: 1.05;
       letter-spacing: -0.04em;
     }
 
@@ -260,7 +285,7 @@
     }
   </style>
 </head>
-<body class="bg-[#ECE6DF] text-[#0F3F49] font-sans antialiased selection:bg-[#7F0508] selection:text-[#ECE6DF] overflow-x-hidden relative min-h-screen pb-28">
+<body class="bg-[#ECE6DF] text-[#0F3F49] font-sans font-light antialiased selection:bg-[#7F0508] selection:text-[#ECE6DF] overflow-x-hidden relative min-h-screen pb-28">
 
   <!-- Subtle Viewport Noise Overlay -->
   <div class="fixed inset-0 pointer-events-none film-noise z-50"></div>
@@ -369,7 +394,7 @@
         </div>
 
         <!-- Giant Fluid H1 mixing Space Grotesk / Syne and Instrument Serif Italic -->
-        <h1 class="fluid-h1 font-display font-extrabold text-[#0F3F49] mb-5 sm:mb-4 max-w-2xl">
+        <h1 class="fluid-h1 font-display font-light text-[#0F3F49] mb-5 sm:mb-4 max-w-2xl">
           Ingeniería Web, <span class="font-serif italic font-normal text-[#7F0508]">Catálogos</span> & Sistemas de <span class="font-serif italic font-normal text-[#7F0508]">IA</span> que venden solos.
         </h1>
 
@@ -498,7 +523,7 @@
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7F0508]/10 border border-[#7F0508]/25 text-[#7F0508] text-[11px] font-mono tracking-widest uppercase mb-4">
         01 — PROPIEDAD TOTAL & CONTROL ABSOLUTO
       </div>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#0F3F49] tracking-[-0.04em] mb-4">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#0F3F49] tracking-[-0.04em] mb-4">
         Deja de pagar alquiler mensual. <br class="hidden sm:inline">
         <span class="font-serif italic font-normal text-[#7F0508]">Sé dueño de tu propia infraestructura digital.</span>
       </h2>
@@ -616,7 +641,7 @@
             <span class="text-[10px] font-mono bg-[#7F0508] text-[#ECE6DF] px-2.5 py-0.5 rounded-full border border-[#7F0508]/50 font-bold">ACTIVO PROPIO</span>
           </div>
 
-          <h3 class="text-xl sm:text-2xl font-display font-extrabold text-[#ECE6DF] mb-2">Ingeniería & IA TESSA</h3>
+          <h3 class="text-xl sm:text-2xl font-display font-light text-[#ECE6DF] mb-2">Ingeniería & IA TESSA</h3>
           <p class="text-xs text-[#ECE6DF]/80 font-mono mb-6 leading-relaxed">
             Software propio de alta velocidad a la medida con checkout nativo en WhatsApp.
           </p>
@@ -687,7 +712,7 @@
           <span class="w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
           <span>02 — CREACIONES & PORTAFOLIO EN VIVO</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#0F3F49] tracking-[-0.04em]">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#0F3F49] tracking-[-0.04em]">
           Proyectos en producción. <br class="hidden sm:inline">
           <span class="font-serif italic font-normal text-[#7F0508]">Software vivo que genera ventas reales.</span>
         </h2>
@@ -743,7 +768,7 @@
                 </div>
                 <div>
                   <div class="flex items-center gap-2 flex-wrap">
-                    <h3 class="text-2xl font-display font-extrabold text-[#0F3F49] group-hover:text-[#7F0508] transition-colors">Once Sports</h3>
+                    <h3 class="text-2xl font-display font-light text-[#0F3F49] group-hover:text-[#7F0508] transition-colors">Once Sports</h3>
                     <span class="text-[9px] font-mono bg-[#7F0508] text-[#ECE6DF] px-2 py-0.5 rounded-full border border-[#7F0508]/30 font-bold">VALENCIA, VZLA</span>
                   </div>
                   <p class="text-xs font-mono text-[#0F3F49]/70 mt-0.5">Suplementación Deportiva & Ropa Fitness</p>
@@ -848,7 +873,7 @@
                 </div>
                 <div>
                   <div class="flex items-center gap-2 flex-wrap">
-                    <h3 class="text-2xl font-display font-extrabold text-[#0F3F49]">Tu Marca Aquí</h3>
+                    <h3 class="text-2xl font-display font-light text-[#0F3F49]">Tu Marca Aquí</h3>
                     <span class="text-[9px] font-mono bg-[#0F3F49]/[0.08] text-[#0F3F49] px-2 py-0.5 rounded-full border border-[#0F3F49]/15 font-bold">DESPLIEGUE EN 48H-72H</span>
                   </div>
                   <p class="text-xs font-mono text-[#0F3F49]/70 mt-0.5">Catálogo WhatsApp, Landing o Sistema IA</p>
@@ -945,7 +970,7 @@
           <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>03 — PROPIEDAD TOTAL • PAGO ÚNICO</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F4F4F0] tracking-[-0.04em]">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#F4F4F0] tracking-[-0.04em]">
           Escala de Soluciones <br class="hidden sm:inline">
           <span class="font-serif italic font-normal text-emerald-400">Tessa Engineering.</span>
         </h2>
@@ -1049,7 +1074,7 @@
           </div>
 
           <!-- Título y Precio -->
-          <h3 class="text-2xl font-display font-extrabold text-white mb-1">Tessa Catálogo Pro</h3>
+          <h3 class="text-2xl font-display font-light text-white mb-1">Tessa Catálogo Pro</h3>
           <div class="text-xs font-mono text-emerald-400 mb-4">E-Commerce WhatsApp & BCV</div>
 
           <div class="my-4">
@@ -1165,7 +1190,7 @@
           </div>
 
           <!-- Título y Precio -->
-          <h3 class="text-2xl font-display font-extrabold text-white mb-1">Corporate + IA</h3>
+          <h3 class="text-2xl font-display font-light text-white mb-1">Corporate + IA</h3>
           <div class="text-xs font-mono text-purple-300 mb-4">Plataforma Web + Agente Autónomo 24/7</div>
 
           <div class="my-4">
