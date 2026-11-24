@@ -171,7 +171,7 @@
     .bento-spotlight {
       position: relative;
       overflow: hidden;
-      border-radius: 28px;
+      border-radius: 12px;
       background: rgba(255, 255, 255, 0.75);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(15, 63, 73, 0.12);
@@ -202,8 +202,7 @@
     /* Card Selected State in Catalog */
     .catalog-card.is-selected {
       border-color: #7F0508 !important;
-      background: #FFFFFF !important;
-      box-shadow: 0 0 35px -4px rgba(127, 5, 8, 0.25), inset 0 0 0 1px #7F0508;
+      box-shadow: 0 0 0 2px #7F0508, 0 16px 36px -10px rgba(127, 5, 8, 0.25) !important;
     }
 
     /* Hide scrollbars for Horizontal Slide Deck */
@@ -333,11 +332,11 @@
         <a href="#creaciones" class="px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider text-[#0F3F49]/70 hover:text-[#0F3F49] hover:bg-[#0F3F49]/[0.06] transition-all">
           Creaciones
         </a>
-        <a href="#catalogo" class="px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider text-[#0F3F49]/70 hover:text-[#0F3F49] hover:bg-[#0F3F49]/[0.06] transition-all">
-          Catálogo
-        </a>
         <a href="#ia" class="px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider text-[#0F3F49]/70 hover:text-[#0F3F49] hover:bg-[#0F3F49]/[0.06] transition-all">
           Sistemas IA
+        </a>
+        <a href="#catalogo" class="px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider text-[#0F3F49]/70 hover:text-[#0F3F49] hover:bg-[#0F3F49]/[0.06] transition-all">
+          Catálogo
         </a>
       </div>
 
@@ -365,8 +364,8 @@
     <div class="flex flex-col gap-6 text-xl font-display font-bold">
       <a href="#comparativa" class="drawer-link text-[#0F3F49]/70 hover:text-[#0F3F49] transition-colors">Arquitectura</a>
       <a href="#creaciones" class="drawer-link text-[#0F3F49]/70 hover:text-[#0F3F49] transition-colors">Creaciones</a>
-      <a href="#catalogo" class="drawer-link text-[#0F3F49]/70 hover:text-[#0F3F49] transition-colors">Catálogo</a>
       <a href="#ia" class="drawer-link text-[#0F3F49]/70 hover:text-[#0F3F49] transition-colors">Sistemas IA</a>
+      <a href="#catalogo" class="drawer-link text-[#0F3F49]/70 hover:text-[#0F3F49] transition-colors">Catálogo</a>
       <a href="#cotizadorBar" class="drawer-link text-[#7F0508] hover:underline transition-colors mt-2 text-sm font-mono">[ Resumen de Cotización ]</a>
     </div>
   </div>
@@ -525,177 +524,144 @@
       </div>
       <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#0F3F49] tracking-[-0.04em] mb-4">
         Deja de pagar alquiler mensual. <br class="hidden sm:inline">
-        <span class="font-serif italic font-normal text-[#7F0508]">Sé dueño de tu propia infraestructura digital.</span>
+        <span class="font-serif italic font-normal text-[#7F0508]">Propiedad</span> total de tu infraestructura.
       </h2>
-      <p class="hidden sm:block text-xs sm:text-sm text-[#0F3F49]/75 font-mono leading-relaxed mb-4 sm:mb-0">
-        El modelo tradicional de aplicaciones te atrapa en rentas perpetuas o tarifas infladas de agencias lentas. En TESSA diseñamos plataformas independientes que te pertenecen para siempre:
+      <p class="hidden sm:block text-xs sm:text-sm text-[#0F3F49]/75 font-mono leading-relaxed max-w-2xl mx-auto">
+        El modelo tradicional de plataformas te atrapa en rentas perpetuas y comisiones ocultas. En TESSA construimos activos digitales de alta velocidad que te pertenecen para siempre:
       </p>
-      <!-- Indicador visual de deslizamiento móvil -->
-      <div class="inline-flex lg:hidden items-center gap-2.5 px-4 py-2 rounded-full bg-[#7F0508]/10 border border-[#7F0508]/25 text-[#7F0508] text-xs sm:text-sm font-mono font-bold mt-3 shadow-sm">
-        <span class="flex h-2.5 w-2.5 relative">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7F0508] opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#7F0508]"></span>
-        </span>
-        <span>Deslizar</span>
-        <i data-lucide="arrow-right" class="w-4 h-4 animate-pulse"></i>
-      </div>
     </div>
 
-    <!-- Comparative Bento Grid (3 Columns / Mobile Carousel) -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mobile-carousel-sec1 hide-scrollbar">
+    <!-- Comparative Split Architecture: 2 Clean Columns with 1px Divider -->
+    <div class="border border-[#0F3F49]/15 rounded-xl bg-white/70 backdrop-blur-md overflow-hidden grid grid-cols-1 lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-[#0F3F49]/15 shadow-sm">
       
-      <!-- Card 1: Apps de Alquiler Mensual -->
-      <div class="bento-spotlight p-7 flex flex-col justify-between border-[#7F0508]/25 bg-white/70 shadow-sm">
+      <!-- Left Column: Operación Tradicional (SaaS & Agencias Viejas) -->
+      <div class="p-8 sm:p-10 flex flex-col justify-between bg-white/60">
         <div>
-          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#0F3F49]/10">
-            <span class="text-xs font-mono text-[#7F0508] font-bold uppercase">APPS GENÉRICAS</span>
-            <span class="text-[10px] font-mono bg-[#7F0508]/10 text-[#7F0508] px-2.5 py-0.5 rounded-full border border-[#7F0508]/20 font-bold">RENTA ETERNA</span>
+          <!-- Column Header -->
+          <div class="flex items-center justify-between pb-4 mb-6 border-b border-[#0F3F49]/10">
+            <span class="text-xs font-mono text-[#7F0508] font-bold uppercase tracking-wider">MODELO TRADICIONAL</span>
+            <span class="text-[10px] font-mono bg-[#7F0508]/10 text-[#7F0508] px-2.5 py-0.5 rounded-full border border-[#7F0508]/20 font-bold uppercase">
+              RENTA PERPETUA
+            </span>
           </div>
 
-          <h3 class="text-xl font-display font-bold text-[#0F3F49] mb-2">Plataformas de Suscripción</h3>
-          <p class="text-xs text-[#0F3F49]/70 font-mono mb-6 leading-relaxed">
-            Plataformas tipo Shopify, PedidosOnline o apps de catálogos prediseñadas.
+          <h3 class="text-2xl font-display font-light text-[#0F3F49] mb-2">Plataformas de Suscripción & Agencias</h3>
+          <p class="text-xs font-mono text-[#0F3F49]/70 mb-8 leading-relaxed">
+            Sistemas tipo Shopify o WordPress genéricos pesados con dependencias mensuales de plugins y servidores lentos.
           </p>
 
-          <div class="p-4 rounded-xl bg-[#ECE6DF]/90 border border-[#7F0508]/20 font-mono mb-6">
-            <div class="text-[#7F0508] font-bold text-xl sm:text-2xl mb-1">$35 a $200 / mes</div>
-            <div class="text-[11px] text-[#0F3F49]/70">= $420 a $2,400 al año en rentas</div>
+          <!-- 3 Key Metric Blocks (Readable in 2 seconds) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+            <div class="p-4 rounded-xl bg-[#ECE6DF]/70 border border-[#0F3F49]/10">
+              <div class="text-2xl sm:text-3xl font-display font-light text-[#7F0508]">$2.400</div>
+              <div class="text-[11px] font-mono text-[#0F3F49]/75 mt-1 font-medium">al año en alquileres</div>
+            </div>
+            <div class="p-4 rounded-xl bg-[#ECE6DF]/70 border border-[#0F3F49]/10">
+              <div class="text-2xl sm:text-3xl font-display font-light text-[#7F0508]">1.5% - 3%</div>
+              <div class="text-[11px] font-mono text-[#0F3F49]/75 mt-1 font-medium">comisión por orden</div>
+            </div>
+            <div class="p-4 rounded-xl bg-[#ECE6DF]/70 border border-[#0F3F49]/10">
+              <div class="text-2xl sm:text-3xl font-display font-light text-[#7F0508]">4 a 6s</div>
+              <div class="text-[11px] font-mono text-[#0F3F49]/75 mt-1 font-medium">tiempo de carga</div>
+            </div>
           </div>
 
-          <ul class="space-y-3 text-xs font-mono text-[#0F3F49]/85">
-            <li class="flex items-start gap-2.5">
+          <!-- Feature Comparison List -->
+          <ul class="space-y-3.5 text-xs font-mono text-[#0F3F49]/85">
+            <li class="flex items-start gap-3">
               <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
-              <span>Si dejas de pagar el mes, <strong>te apagan la tienda</strong> y pierdes tus clientes.</span>
+              <span>Si dejas de pagar la mensualidad, <strong>te apagan la tienda</strong> y pierdes tu catálogo de clientes.</span>
             </li>
-            <li class="flex items-start gap-2.5">
+            <li class="flex items-start gap-3">
               <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
-              <span>Comisiones ocultas del 1.5% al 3% por cada orden recibida.</span>
+              <span>Plantillas cuadradas que lucen idénticas a las de tus competidores directos.</span>
             </li>
-            <li class="flex items-start gap-2.5">
+            <li class="flex items-start gap-3">
               <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
-              <span>Plantillas cuadradas e idénticas a las de tu competencia.</span>
+              <span>Sin cálculo de Tasa BCV automática ni sincronización nativa de checkout a WhatsApp.</span>
             </li>
-            <li class="flex items-start gap-2.5">
+            <li class="flex items-start gap-3">
               <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
-              <span>Sin soporte para agentes de IA ni Tasa BCV automática real.</span>
+              <span>Tiempos de entrega de agencias tradicionales de 4 a 8 semanas con sobreprecios.</span>
             </li>
           </ul>
         </div>
 
-        <div class="pt-6 mt-6 border-t border-[#0F3F49]/10 text-[11px] font-mono text-[#7F0508]">
-          ⚠️ Pérdida continua de capital sin acumular activos digitales propios.
+        <div class="pt-6 mt-8 border-t border-[#0F3F49]/10 flex items-center justify-between text-[11px] font-mono text-[#7F0508]">
+          <span>⚠️ Pérdida continua de liquidez sin acumular activos.</span>
+          <span class="text-[#0F3F49]/40 hidden sm:inline">0% CONTROL</span>
         </div>
       </div>
 
-      <!-- Card 2: Agencias Tradicionales Locales -->
-      <div class="bento-spotlight p-7 flex flex-col justify-between border-[#0F3F49]/15 bg-white/70 shadow-sm">
+      <!-- Right Column: Ecosistema TESSA (Ingeniería Propia) -->
+      <div class="p-8 sm:p-10 flex flex-col justify-between bg-[#0F3F49] text-[#ECE6DF] relative overflow-hidden">
+        
+        <!-- Ambient Decorative Lighting -->
+        <div class="absolute -right-20 -top-20 w-64 h-64 bg-[#7F0508]/15 rounded-full blur-3xl pointer-events-none"></div>
+
         <div>
-          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#0F3F49]/10">
-            <span class="text-xs font-mono text-[#0F3F49]/70 font-bold uppercase">AGENCIAS VIEJAS</span>
-            <span class="text-[10px] font-mono bg-[#0F3F49]/10 text-[#0F3F49] px-2.5 py-0.5 rounded-full border border-[#0F3F49]/20 font-bold">SOBREPRECIO</span>
-          </div>
-
-          <h3 class="text-xl font-display font-bold text-[#0F3F49] mb-2">Agencias Tradicionales</h3>
-          <p class="text-xs text-[#0F3F49]/70 font-mono mb-6 leading-relaxed">
-            Agencias de marketing genéricas montando WordPress pesados con plugins rotos.
-          </p>
-
-          <div class="p-4 rounded-xl bg-[#ECE6DF]/90 border border-[#0F3F49]/15 font-mono mb-6">
-            <div class="text-[#0F3F49] font-bold text-xl sm:text-2xl mb-1">$700 a $1,100 USD</div>
-            <div class="text-[11px] text-[#0F3F49]/70">Cobro inicial inflado + mantenimiento</div>
-          </div>
-
-          <ul class="space-y-3 text-xs font-mono text-[#0F3F49]/85">
-            <li class="flex items-start gap-2.5">
-              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
-              <span>Tiempos de entrega lentos de 3 a 6 semanas.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
-              <span>Páginas pesadas que tardan 4 a 6 segundos en cargar en teléfonos.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
-              <span>Te cobran $80/mes sólo por "actualizar plugins" de WordPress.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <i data-lucide="x" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
-              <span>Cero conocimiento en automatización de Inteligencia Artificial.</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="pt-6 mt-6 border-t border-[#0F3F49]/10 text-[11px] font-mono text-[#0F3F49]/60">
-          ⚠️ Software obsoleto que ahuyenta a los clientes por lentitud de carga.
-        </div>
-      </div>
-
-      <!-- Card 3: Ecosistema Propio TESSA (Featured Winner - Inverted Deep Aquamarine) -->
-      <div class="bento-spotlight p-7 flex flex-col justify-between border-2 border-[#0F3F49] bg-[#0F3F49] text-[#ECE6DF] shadow-[0_12px_45px_rgba(15,63,73,0.22)] relative overflow-hidden">
-        <div>
-          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#ECE6DF]/20">
+          <!-- Column Header -->
+          <div class="flex items-center justify-between pb-4 mb-6 border-b border-[#ECE6DF]/15">
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-[#ECE6DF] animate-ping"></span>
               <span class="text-xs font-mono text-[#ECE6DF] font-bold uppercase tracking-wider">ECOSISTEMA TESSA</span>
             </div>
-            <span class="text-[10px] font-mono bg-[#7F0508] text-[#ECE6DF] px-2.5 py-0.5 rounded-full border border-[#7F0508]/50 font-bold">ACTIVO PROPIO</span>
+            <span class="text-[10px] font-mono bg-[#7F0508] text-[#ECE6DF] px-2.5 py-0.5 rounded-full border border-[#7F0508]/40 font-bold uppercase">
+              ACTIVO PROPIO
+            </span>
           </div>
 
-          <h3 class="text-xl sm:text-2xl font-display font-light text-[#ECE6DF] mb-2">Ingeniería & IA TESSA</h3>
-          <p class="text-xs text-[#ECE6DF]/80 font-mono mb-6 leading-relaxed">
-            Software propio de alta velocidad a la medida con checkout nativo en WhatsApp.
+          <h3 class="text-2xl font-display font-light text-[#ECE6DF] mb-2">Ingeniería Web, Catálogos & Automatización</h3>
+          <p class="text-xs font-mono text-[#ECE6DF]/80 mb-8 leading-relaxed">
+            Arquitectura moderna y liviana en HTML5/Vanilla JS. Todo el código te pertenece, sin intermediarios ni cuotas mensuales.
           </p>
 
-          <div class="p-4 rounded-xl bg-[#08262C] border border-[#ECE6DF]/20 font-mono mb-6">
-            <div class="text-[#ECE6DF] font-bold text-2xl mb-1">Pago Único (Desde $120)</div>
-            <div class="text-[11px] text-[#ECE6DF]/80">0% Comisiones por venta • $0/mes hosting base</div>
+          <!-- 3 Key Metric Blocks (Readable in 2 seconds) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
+            <div class="p-4 rounded-xl bg-[#08262C] border border-[#ECE6DF]/15">
+              <div class="text-2xl sm:text-3xl font-display font-light text-[#ECE6DF]">Desde $120</div>
+              <div class="text-[11px] font-mono text-[#ECE6DF]/70 mt-1 font-medium">pago único de por vida</div>
+            </div>
+            <div class="p-4 rounded-xl bg-[#08262C] border border-[#ECE6DF]/15">
+              <div class="text-2xl sm:text-3xl font-display font-light text-[#7F0508] bg-[#ECE6DF] px-2 py-0.5 rounded inline-block">0%</div>
+              <div class="text-[11px] font-mono text-[#ECE6DF]/70 mt-1 font-medium">comisiones por ventas</div>
+            </div>
+            <div class="p-4 rounded-xl bg-[#08262C] border border-[#ECE6DF]/15">
+              <div class="text-2xl sm:text-3xl font-display font-light text-[#ECE6DF]">&lt;0.4s</div>
+              <div class="text-[11px] font-mono text-[#ECE6DF]/70 mt-1 font-medium">carga ultra-rápida</div>
+            </div>
           </div>
 
-          <ul class="space-y-3 text-xs font-mono text-[#ECE6DF]">
-            <li class="flex items-start gap-2.5">
+          <!-- Feature Comparison List -->
+          <ul class="space-y-3.5 text-xs font-mono text-[#ECE6DF]">
+            <li class="flex items-start gap-3">
               <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
-              <span><strong>El software es tuyo:</strong> Nunca te apagamos la tienda ni cobramos porcentajes.</span>
+              <span><strong>El software es tuyo:</strong> Jamás te apagamos la plataforma ni te cobramos comisiones por facturar.</span>
             </li>
-            <li class="flex items-start gap-2.5">
+            <li class="flex items-start gap-3">
               <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
-              <span><strong>Tasa Oficial BCV automática:</strong> Precios en $ y Bs. al día sin tocar nada.</span>
+              <span><strong>Tasa Oficial BCV automática:</strong> Precios calculados al día en dólares y bolívares sin intervención manual.</span>
             </li>
-            <li class="flex items-start gap-2.5">
+            <li class="flex items-start gap-3">
               <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
-              <span><strong>Velocidad extrema &lt;0.4s:</strong> Arquitectura moderna sin plugins lentos.</span>
+              <span><strong>Checkout nativo a WhatsApp:</strong> Carrito interactivo que redacta el pedido con comprobantes de pago.</span>
             </li>
-            <li class="flex items-start gap-2.5">
+            <li class="flex items-start gap-3">
               <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
-              <span><strong>Agentes IA y Chatwoot:</strong> Respuestas 24/7 y carritos automáticos.</span>
+              <span><strong>Despliegue ágil en 48h a 72h:</strong> Entrega inmediata lista para recibir clientes y cerrar ventas.</span>
             </li>
           </ul>
         </div>
 
-        <div class="pt-6 mt-6 border-t border-[#ECE6DF]/20">
-          <a href="#catalogo" class="w-full py-3 rounded-full bg-[#ECE6DF] hover:bg-white text-[#0F3F49] font-sans font-bold text-xs uppercase tracking-tight flex items-center justify-center gap-2 transition-all shadow-md">
-            <span>Ver Catálogo de Servicios</span>
+        <div class="pt-6 mt-8 border-t border-[#ECE6DF]/15 flex items-center justify-between">
+          <span class="text-[11px] font-mono text-[#ECE6DF]/70">✓ 100% Control y Propiedad Digital</span>
+          <a href="#catalogo" class="px-5 py-2 rounded-full bg-[#ECE6DF] hover:bg-white text-[#0F3F49] font-sans font-bold text-xs uppercase tracking-tight inline-flex items-center gap-2 transition-all shadow-md">
+            <span>Ver Catálogo</span>
             <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
           </a>
         </div>
       </div>
 
-    </div>
-
-    <!-- Controles de Carrusel Móvil (Sec 1) -->
-    <div class="flex lg:hidden items-center justify-between mt-4 px-2 select-none">
-      <div class="flex items-center gap-1.5 font-mono text-[11px] text-[#0F3F49]/70">
-        <span class="inline-block w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
-        <span id="label-sec1">1 de 3</span>
-      </div>
-      <div class="flex items-center gap-1.5" id="dots-sec1"></div>
-      <div class="flex items-center gap-2">
-        <button type="button" onclick="scrollCarousel('mobile-carousel-sec1', -1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Anterior">
-          <i data-lucide="chevron-left" class="w-4 h-4"></i>
-        </button>
-        <button type="button" onclick="scrollCarousel('mobile-carousel-sec1', 1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Siguiente">
-          <i data-lucide="chevron-right" class="w-4 h-4"></i>
-        </button>
-      </div>
     </div>
 
   </section>
@@ -714,7 +680,7 @@
         </div>
         <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#0F3F49] tracking-[-0.04em]">
           Proyectos en producción. <br class="hidden sm:inline">
-          <span class="font-serif italic font-normal text-[#7F0508]">Software vivo que genera ventas reales.</span>
+          Software vivo que genera <span class="font-serif italic font-normal text-[#7F0508]">ventas</span> reales.
         </h2>
       </div>
 
@@ -722,25 +688,16 @@
         <p class="hidden sm:block text-xs sm:text-sm text-[#0F3F49]/70 font-mono leading-relaxed">
           Comprueba la velocidad extrema, la estética y el flujo de compra en proyectos activos desarrollados por TESSA. Haz clic para probar la experiencia en vivo.
         </p>
-        <!-- Indicador visual de deslizamiento móvil -->
-        <div class="inline-flex lg:hidden items-center gap-2.5 px-4 py-2 rounded-full bg-[#7F0508]/10 border border-[#7F0508]/25 text-[#7F0508] text-xs sm:text-sm font-mono font-bold mt-3 shadow-sm">
-          <span class="flex h-2.5 w-2.5 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#7F0508] opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#7F0508]"></span>
-          </span>
-          <span>Deslizar</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 animate-pulse"></i>
-        </div>
       </div>
     </div>
 
-    <!-- Portfolio Grid / Mobile Carousel -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mobile-carousel-sec2 hide-scrollbar">
+    <!-- Portfolio Grid / Showcase -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       
       <!-- ===================================================================== -->
       <!-- PROYECTO 01: ONCE SPORTS (Suplementos & Ropa Fitness) -->
       <!-- ===================================================================== -->
-      <article class="bento-spotlight flex flex-col justify-between border border-[#0F3F49]/15 bg-white/80 group shadow-sm hover:shadow-xl transition-all">
+      <article class="bento-spotlight flex flex-col justify-between border border-[#0F3F49]/15 bg-white/85 group shadow-sm hover:shadow-xl transition-all rounded-xl">
         
         <div>
           <!-- Browser Mockup Window Header -->
@@ -749,7 +706,7 @@
               <span class="w-2.5 h-2.5 rounded-full bg-[#7F0508] inline-block"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#0F3F49]/40 inline-block"></span>
               <span class="w-2.5 h-2.5 rounded-full bg-[#0F3F49] inline-block"></span>
-              <span class="text-[#0F3F49]/60 ml-2 hidden sm:inline">tessawebs.github.io/oncesports</span>
+              <span class="text-[#0F3F49]/70 ml-2 font-mono text-[11px]">tessawebs.github.io/oncesports</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-[#7F0508] animate-ping"></span>
@@ -763,13 +720,13 @@
             <!-- Brand Identity Header -->
             <div class="flex items-start justify-between gap-4 mb-6">
               <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-2xl bg-[#ECE6DF] border border-[#0F3F49]/15 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:border-[#7F0508] transition-colors">
+                <div class="w-14 h-14 rounded-xl bg-[#ECE6DF] border border-[#0F3F49]/15 p-2 flex items-center justify-center shrink-0 shadow-sm group-hover:border-[#7F0508] transition-colors">
                   <img src="assets/once-logo.png" alt="Once Sports Logo" class="w-full h-full object-contain" onerror="this.src='assets/once-logo.svg'">
                 </div>
                 <div>
                   <div class="flex items-center gap-2 flex-wrap">
                     <h3 class="text-2xl font-display font-light text-[#0F3F49] group-hover:text-[#7F0508] transition-colors">Once Sports</h3>
-                    <span class="text-[9px] font-mono bg-[#7F0508] text-[#ECE6DF] px-2 py-0.5 rounded-full border border-[#7F0508]/30 font-bold">VALENCIA, VZLA</span>
+                    <span class="text-[9px] font-mono bg-[#7F0508] text-[#ECE6DF] px-2 py-0.5 rounded-md border border-[#7F0508]/30 font-bold">VALENCIA, VZLA</span>
                   </div>
                   <p class="text-xs font-mono text-[#0F3F49]/70 mt-0.5">Suplementación Deportiva & Ropa Fitness</p>
                 </div>
@@ -781,51 +738,74 @@
               </a>
             </div>
 
-            <!-- Stylized Athletic UI Preview Box -->
-            <div class="p-5 rounded-2xl bg-[#ECE6DF]/70 border border-[#0F3F49]/10 mb-6 relative overflow-hidden group/preview">
-              <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-[#7F0508]/10 rounded-full blur-2xl pointer-events-none"></div>
+            <!-- DUAL DEVICE PRODUCT SHOWCASE (Mobile WhatsApp + Desktop Catalog Preview) -->
+            <div class="p-4 sm:p-5 rounded-xl bg-[#ECE6DF]/60 border border-[#0F3F49]/15 mb-6 relative overflow-hidden">
               
-              <div class="flex items-center justify-between text-[10px] font-mono text-[#0F3F49]/60 mb-3 border-b border-[#0F3F49]/10 pb-2">
-                <span>PROPUESTA DE VALOR</span>
-                <span class="text-[#7F0508] font-bold">100% ORIGINAL A TASA BCV</span>
+              <!-- Mini App Bar & Search Mockup -->
+              <div class="flex items-center justify-between pb-3 mb-3 border-b border-[#0F3F49]/10 text-[10px] font-mono text-[#0F3F49]/70">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-[#0F3F49]"></span>
+                  <span class="font-bold text-[#0F3F49]">CATÁLOGO EN VIVO:</span>
+                  <span class="hidden sm:inline">Proteínas • Creatinas • Vitaminas</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[#7F0508] font-bold">
+                  <i data-lucide="zap" class="w-3 h-3"></i>
+                  <span>0.38s CARGA</span>
+                </div>
               </div>
 
-              <blockquote class="text-sm font-sans text-[#0F3F49] italic font-medium leading-snug mb-4">
-                "Suplementación bien elegida. Marcas originales, información clara y delivery en Valencia, Carabobo. Decide con inteligencia."
-              </blockquote>
+              <!-- WhatsApp Structured Order Mockup Bubble -->
+              <div class="p-3.5 rounded-lg bg-white border border-[#0F3F49]/10 shadow-xs text-xs font-mono mb-3">
+                <div class="flex items-center justify-between pb-2 mb-2 border-b border-[#0F3F49]/10 text-[10px]">
+                  <span class="flex items-center gap-1.5 text-[#0F3F49] font-bold">
+                    <i data-lucide="message-circle" class="w-3.5 h-3.5 text-[#25D366]"></i>
+                    <span>MENSAJE AUTÓNOMO GENERADO</span>
+                  </span>
+                  <span class="text-[#7F0508] font-bold">TASA BCV AL DÍA</span>
+                </div>
+                <div class="space-y-1 text-[#0F3F49]/90 text-[11px] leading-snug">
+                  <div class="font-bold text-[#0F3F49]">⚡ NUEVO PEDIDO — ONCE SPORTS</div>
+                  <div>• 1x Creatina Micronizada 300g — $32.00</div>
+                  <div>• 1x ISO 100 Whey Protein 5lbs — $85.00</div>
+                  <div class="pt-1.5 border-t border-[#0F3F49]/10 flex items-center justify-between font-bold">
+                    <span class="text-[#0F3F49]">TOTAL ESTIMADO:</span>
+                    <span class="text-[#7F0508]">$117.00 USD (Bs. Oficial)</span>
+                  </div>
+                </div>
+              </div>
 
               <!-- Live Feature Badges -->
               <div class="grid grid-cols-2 gap-2 text-[11px] font-mono text-[#0F3F49]">
-                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-[#0F3F49]/10 shadow-xs">
+                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white/90 border border-[#0F3F49]/10 shadow-xs">
                   <i data-lucide="shopping-cart" class="w-3.5 h-3.5 text-[#7F0508]"></i>
-                  <span>Carrito Flotante</span>
+                  <span>Carrito Interactivo</span>
                 </div>
-                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-[#0F3F49]/10 shadow-xs">
+                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white/90 border border-[#0F3F49]/10 shadow-xs">
                   <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-[#0F3F49]"></i>
-                  <span>Tasa BCV al Día</span>
+                  <span>Tasa BCV Automática</span>
                 </div>
-                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-[#0F3F49]/10 shadow-xs">
+                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white/90 border border-[#0F3F49]/10 shadow-xs">
                   <i data-lucide="message-circle" class="w-3.5 h-3.5 text-[#7F0508]"></i>
-                  <span>Pedido a WhatsApp</span>
+                  <span>Checkout a WhatsApp</span>
                 </div>
-                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white border border-[#0F3F49]/10 shadow-xs">
-                  <i data-lucide="zap" class="w-3.5 h-3.5 text-[#0F3F49]"></i>
-                  <span>Carga en &lt;0.4s</span>
+                <div class="flex items-center gap-1.5 p-2 rounded-lg bg-white/90 border border-[#0F3F49]/10 shadow-xs">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#0F3F49]"></i>
+                  <span>0% Comisiones</span>
                 </div>
               </div>
+
             </div>
 
             <!-- Context Paragraph -->
             <p class="text-xs text-[#0F3F49]/80 leading-relaxed mb-6 font-sans">
-              Catálogo e-commerce interactivo con checkout automatizado hacia WhatsApp. Los clientes seleccionan productos con variantes de tamaño y sabor, visualizan el monto total estimado en divisas y bolívares a tasa oficial BCV, y envían su orden lista para despacho por delivery sin intermediarios ni cobro de comisiones.
+              Catálogo de alto rendimiento con checkout directo a WhatsApp. Los clientes seleccionan productos, escogen variantes de sabor y tamaño, visualizan el monto en divisas y bolívares a tasa oficial BCV, y envían su orden lista con comprobante de pago para despacho rápido.
             </p>
 
             <!-- Tech Tags -->
             <div class="flex flex-wrap gap-2 pt-2 border-t border-[#0F3F49]/10 font-mono text-[10px] text-[#0F3F49]/70">
               <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">HTML5 / Vanilla JS</span>
-              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">WhatsApp Commerce</span>
+              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">WhatsApp Checkout</span>
               <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">Tasa Oficial BCV</span>
-              <span class="px-2.5 py-1 rounded-md bg-[#ECE6DF] border border-[#0F3F49]/10">Zero-Bloat &lt;0.4s</span>
               <span class="px-2.5 py-1 rounded-md bg-[#0F3F49] text-[#ECE6DF] border border-[#0F3F49]">by tessalabs</span>
             </div>
 
@@ -845,7 +825,7 @@
       <!-- ===================================================================== -->
       <!-- PROYECTO 02 / SLOT DISPONIBLE: TU PRÓXIMO LANZAMIENTO -->
       <!-- ===================================================================== -->
-      <article class="bento-spotlight flex flex-col justify-between border-dashed border-[#0F3F49]/30 hover:border-[#7F0508] bg-white/60 hover:bg-white/80 group transition-all shadow-sm">
+      <article class="bento-spotlight flex flex-col justify-between border-dashed border-[#0F3F49]/30 hover:border-[#7F0508] bg-white/60 hover:bg-white/80 group transition-all shadow-sm rounded-xl">
         
         <div>
           <!-- Browser Mockup Window Header -->
@@ -868,24 +848,24 @@
             <!-- Brand Identity Header -->
             <div class="flex items-start justify-between gap-4 mb-6">
               <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-2xl bg-[#7F0508]/10 border border-dashed border-[#7F0508]/30 flex items-center justify-center shrink-0 text-[#7F0508] group-hover:scale-105 transition-all">
+                <div class="w-14 h-14 rounded-xl bg-[#7F0508]/10 border border-dashed border-[#7F0508]/30 flex items-center justify-center shrink-0 text-[#7F0508] group-hover:scale-105 transition-all">
                   <i data-lucide="sparkles" class="w-6 h-6"></i>
                 </div>
                 <div>
                   <div class="flex items-center gap-2 flex-wrap">
                     <h3 class="text-2xl font-display font-light text-[#0F3F49]">Tu Marca Aquí</h3>
-                    <span class="text-[9px] font-mono bg-[#0F3F49]/[0.08] text-[#0F3F49] px-2 py-0.5 rounded-full border border-[#0F3F49]/15 font-bold">DESPLIEGUE EN 48H-72H</span>
+                    <span class="text-[9px] font-mono bg-[#0F3F49]/[0.08] text-[#0F3F49] px-2 py-0.5 rounded-md border border-[#0F3F49]/15 font-bold">DESPLIEGUE EN 48H-72H</span>
                   </div>
-                  <p class="text-xs font-mono text-[#0F3F49]/70 mt-0.5">Catálogo WhatsApp, Landing o Sistema IA</p>
+                  <p class="text-xs font-mono text-[#0F3F49]/70 mt-0.5">Catálogo WhatsApp, Web Corporativa o Sistema IA</p>
                 </div>
               </div>
             </div>
 
             <!-- Value Callout Box -->
-            <div class="p-5 rounded-2xl bg-[#ECE6DF]/80 border border-dashed border-[#0F3F49]/20 mb-6 text-xs font-mono">
-              <div class="text-[#7F0508] font-bold mb-2 flex items-center gap-2">
+            <div class="p-5 rounded-xl bg-[#ECE6DF]/80 border border-dashed border-[#0F3F49]/20 mb-6 text-xs font-mono">
+              <div class="text-[#7F0508] font-bold mb-3 flex items-center gap-2">
                 <i data-lucide="layers" class="w-4 h-4"></i>
-                <span>¿QUÉ INCLUYE TU PRÓXIMA CREACIÓN CON TESSA?</span>
+                <span>¿QUÉ INCLUYE TU PRÓXIMO LANZAMIENTO?</span>
               </div>
               <ul class="space-y-2.5 text-[#0F3F49]/90">
                 <li class="flex items-center gap-2">
@@ -898,7 +878,7 @@
                   <span class="text-[#0F3F49] font-bold">✓</span> Cero mensualidades de alquiler ni cobro de comisiones
                 </li>
                 <li class="flex items-center gap-2">
-                  <span class="text-[#0F3F49] font-bold">✓</span> Entrega garantizada lista para vender en pocos días
+                  <span class="text-[#0F3F49] font-bold">✓</span> Entrega garantizada lista para vender en 48h a 72h
                 </li>
               </ul>
             </div>
@@ -928,67 +908,170 @@
 
       </article>
 
-      <!-- 
-        ========================================================================
-        💡 GUÍA PARA AGREGAR NUEVAS CREACIONES A ESTE PORTAFOLIO:
-        Para sumar un nuevo proyecto, duplica el bloque <article class="bento-spotlight ...">
-        de "Once Sports", actualiza el enlace en href="https://...", el logo, el título 
-        y los textos de valor. ¡El diseño se adapta automáticamente!
-        ========================================================================
-      -->
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. SISTEMAS IA & FLUJOS AUTÓNOMOS (`#ia`) -->
+  <!-- ========================================================================= -->
+  <section id="ia" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto relative z-10 border-t border-[#0F3F49]/15">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7F0508]/10 border border-[#7F0508]/25 text-[#7F0508] text-[11px] font-mono tracking-widest uppercase mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
+          <span>03 — SISTEMAS IA & ARQUITECTURA AUTÓNOMA</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#0F3F49] tracking-[-0.04em]">
+          Automatización que no duerme. <br class="hidden sm:inline">
+          Flujos inteligentes para tu <span class="font-serif italic font-normal text-[#7F0508]">negocio</span>.
+        </h2>
+      </div>
+
+      <div class="max-w-md">
+        <p class="hidden sm:block text-xs sm:text-sm text-[#0F3F49]/70 font-mono leading-relaxed">
+          Conectamos agentes de Inteligencia Artificial entrenados con tu inventario para atender clientes, cotizar a tasa oficial y armar órdenes 24/7 sin errores humanos.
+        </p>
+      </div>
+    </div>
+
+    <!-- Minimalist 1px Line Flow Diagram (Cliente → Agente IA + Tasa BCV → Pedido WhatsApp/CRM) -->
+    <div class="border border-[#0F3F49]/15 rounded-xl bg-white/70 backdrop-blur-md p-6 sm:p-10 shadow-sm mb-12">
+      
+      <!-- Flow Header Meta -->
+      <div class="flex items-center justify-between pb-6 mb-8 border-b border-[#0F3F49]/10 text-xs font-mono">
+        <div class="flex items-center gap-2 text-[#0F3F49]">
+          <span class="w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
+          <span class="font-bold uppercase tracking-wider">DIAGRAMA TÉCNICO DE EJECUCIÓN (LATENCIA &lt; 0.5s)</span>
+        </div>
+        <span class="text-[#0F3F49]/60 hidden sm:inline">WEBHOOKS • n8n • LLM ENGINE</span>
+      </div>
+
+      <!-- 3-Step Horizontal Grid with 1px Connectors -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+        
+        <!-- Step 1: Input del Cliente -->
+        <div class="p-6 rounded-xl bg-white border border-[#0F3F49]/15 relative group hover:border-[#7F0508] transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#0F3F49]/10">
+              <span class="text-[11px] font-mono text-[#7F0508] font-bold">FASE 01</span>
+              <span class="text-[10px] font-mono bg-[#ECE6DF] text-[#0F3F49] px-2 py-0.5 rounded font-bold uppercase">ENTRADA</span>
+            </div>
+            <div class="w-10 h-10 rounded-lg bg-[#0F3F49]/[0.06] text-[#0F3F49] flex items-center justify-center mb-4">
+              <i data-lucide="message-square" class="w-5 h-5 text-[#0F3F49]"></i>
+            </div>
+            <h4 class="text-lg font-display font-light text-[#0F3F49] mb-2">Cliente Escribe en Chat</h4>
+            <p class="text-xs font-mono text-[#0F3F49]/70 leading-relaxed mb-4">
+              El usuario pregunta en lenguaje natural por disponibilidad, tallas o precios desde WhatsApp o la tienda web.
+            </p>
+          </div>
+          <div class="p-3 rounded-lg bg-[#ECE6DF]/60 border border-[#0F3F49]/10 text-[11px] font-mono text-[#0F3F49]/80">
+            💬 <em>"Hola, ¿tienen Creatina en stock y cuál es el precio en bolívares?"</em>
+          </div>
+        </div>
+
+        <!-- Step 2: Agente IA + Tasa BCV (Central Processing) -->
+        <div class="p-6 rounded-xl bg-[#0F3F49] text-[#ECE6DF] border border-[#0F3F49] relative group shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#ECE6DF]/15">
+              <span class="text-[11px] font-mono text-[#ECE6DF] font-bold">FASE 02</span>
+              <span class="text-[10px] font-mono bg-[#7F0508] text-[#ECE6DF] px-2 py-0.5 rounded font-bold uppercase">PROCESO IA</span>
+            </div>
+            <div class="w-10 h-10 rounded-lg bg-[#ECE6DF]/15 text-[#ECE6DF] flex items-center justify-center mb-4">
+              <i data-lucide="cpu" class="w-5 h-5 text-[#ECE6DF]"></i>
+            </div>
+            <h4 class="text-lg font-display font-light text-[#ECE6DF] mb-2">Agente IA + Tasa BCV</h4>
+            <p class="text-xs font-mono text-[#ECE6DF]/80 leading-relaxed mb-4">
+              La IA consulta el inventario en tiempo real, obtiene la Tasa Oficial BCV del día y calcula el total exacto.
+            </p>
+          </div>
+          <div class="p-3 rounded-lg bg-[#08262C] border border-[#ECE6DF]/15 text-[11px] font-mono text-[#ECE6DF]/90">
+            ⚡ <em>Inventario: 8 unid. • Tasa BCV sincronizada • Monto exacto calculado</em>
+          </div>
+        </div>
+
+        <!-- Step 3: Pedido Estructurado en WhatsApp / CRM -->
+        <div class="p-6 rounded-xl bg-white border border-[#0F3F49]/15 relative group hover:border-[#7F0508] transition-all flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-[#0F3F49]/10">
+              <span class="text-[11px] font-mono text-[#7F0508] font-bold">FASE 03</span>
+              <span class="text-[10px] font-mono bg-[#7F0508]/10 text-[#7F0508] px-2 py-0.5 rounded font-bold uppercase">CIERRE</span>
+            </div>
+            <div class="w-10 h-10 rounded-lg bg-[#7F0508]/10 text-[#7F0508] flex items-center justify-center mb-4">
+              <i data-lucide="check-check" class="w-5 h-5 text-[#7F0508]"></i>
+            </div>
+            <h4 class="text-lg font-display font-light text-[#0F3F49] mb-2">Orden Lista en WhatsApp / CRM</h4>
+            <p class="text-xs font-mono text-[#0F3F49]/70 leading-relaxed mb-4">
+              El cliente recibe su orden formateada con datos de Pago Móvil o Zelle. Tu equipo sólo despacha el pedido.
+            </p>
+          </div>
+          <div class="p-3 rounded-lg bg-[#ECE6DF]/60 border border-[#0F3F49]/10 text-[11px] font-mono text-[#7F0508] font-bold">
+            ✓ Pedido #1084 listo • Comprobante validado • Cero trabajo manual
+          </div>
+        </div>
+
+      </div>
 
     </div>
 
-    <!-- Controles de Carrusel Móvil (Sec 2) -->
-    <div class="flex lg:hidden items-center justify-between mt-4 px-2 select-none">
-      <div class="flex items-center gap-1.5 font-mono text-[11px] text-[#0F3F49]/70">
-        <span class="inline-block w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
-        <span id="label-sec2">1 de 2</span>
+    <!-- Technical Architecture Spec Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="p-5 rounded-xl bg-white/70 border border-[#0F3F49]/10">
+        <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#0F3F49] mb-1">
+          <i data-lucide="bot" class="w-4 h-4 text-[#7F0508]"></i>
+          <span>Agentes Custom LLM</span>
+        </div>
+        <p class="text-[11px] font-mono text-[#0F3F49]/70">Entrenados específicamente con las preguntas frecuentes y productos de tu marca.</p>
       </div>
-      <div class="flex items-center gap-1.5" id="dots-sec2"></div>
-      <div class="flex items-center gap-2">
-        <button type="button" onclick="scrollCarousel('mobile-carousel-sec2', -1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Anterior">
-          <i data-lucide="chevron-left" class="w-4 h-4"></i>
-        </button>
-        <button type="button" onclick="scrollCarousel('mobile-carousel-sec2', 1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Siguiente">
-          <i data-lucide="chevron-right" class="w-4 h-4"></i>
-        </button>
+      <div class="p-5 rounded-xl bg-white/70 border border-[#0F3F49]/10">
+        <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#0F3F49] mb-1">
+          <i data-lucide="refresh-cw" class="w-4 h-4 text-[#0F3F49]"></i>
+          <span>Tasa BCV Automatizada</span>
+        </div>
+        <p class="text-[11px] font-mono text-[#0F3F49]/70">Actualización en vivo cada mañana sin necesidad de cambiar precios uno por uno.</p>
+      </div>
+      <div class="p-5 rounded-xl bg-white/70 border border-[#0F3F49]/10">
+        <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#0F3F49] mb-1">
+          <i data-lucide="webhook" class="w-4 h-4 text-[#7F0508]"></i>
+          <span>Webhooks & CRM n8n</span>
+        </div>
+        <p class="text-[11px] font-mono text-[#0F3F49]/70">Conexión directa a WhatsApp Business, Chatwoot, Notion o Google Sheets.</p>
+      </div>
+      <div class="p-5 rounded-xl bg-white/70 border border-[#0F3F49]/10">
+        <div class="flex items-center gap-2 text-xs font-mono font-bold text-[#0F3F49] mb-1">
+          <i data-lucide="shield" class="w-4 h-4 text-[#0F3F49]"></i>
+          <span>Propiedad del Flujo</span>
+        </div>
+        <p class="text-[11px] font-mono text-[#0F3F49]/70">Tus datos y conversaciones no quedan atrapados en plataformas cerradas de terceros.</p>
       </div>
     </div>
 
   </section>
 
   <!-- ========================================================================= -->
-  <!-- 4. INTERACTIVE SERVICE CATALOG & WHATSAPP QUOTER (`#catalogo` & `#ia`) -->
+  <!-- 5. CATÁLOGO DE SERVICIOS & PROPIEDAD TOTAL (`#catalogo`) -->
   <!-- ========================================================================= -->
   <section id="catalogo" class="py-24 px-4 sm:px-8 max-w-7xl mx-auto relative z-10">
     
     <!-- Encabezado de la Sección -->
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
       <div>
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-emerald-400 text-[11px] font-mono tracking-widest uppercase mb-4">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>03 — PROPIEDAD TOTAL • PAGO ÚNICO</span>
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#7F0508]/10 border border-[#7F0508]/25 text-[#7F0508] text-[11px] font-mono tracking-widest uppercase mb-4">
+          <span class="w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
+          <span>04 — PROPIEDAD TOTAL • PAGO ÚNICO</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#F4F4F0] tracking-[-0.04em]">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-light text-[#0F3F49] tracking-[-0.04em]">
           Escala de Soluciones <br class="hidden sm:inline">
-          <span class="font-serif italic font-normal text-emerald-400">Tessa Engineering.</span>
+          <span class="font-serif italic font-normal text-[#7F0508]">Tessa</span> Engineering.
         </h2>
       </div>
 
       <div class="max-w-md">
-        <p class="hidden sm:block text-xs sm:text-sm text-zinc-400 font-mono leading-relaxed">
+        <p class="hidden sm:block text-xs sm:text-sm text-[#0F3F49]/75 font-mono leading-relaxed">
           Elige el paquete ideal para tu negocio. Sé dueño absoluto de tu infraestructura digital sin mensualidades de alquiler ni comisiones por ventas.
         </p>
-        <!-- Indicador visual de deslizamiento móvil -->
-        <div class="inline-flex md:hidden items-center gap-2.5 px-4 py-2 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-mono font-bold mt-3 shadow-sm">
-          <span class="flex h-2.5 w-2.5 relative">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
-          </span>
-          <span>Deslizar</span>
-          <i data-lucide="arrow-right" class="w-4 h-4 animate-pulse"></i>
-        </div>
       </div>
     </div>
 
@@ -998,59 +1081,64 @@
       <!-- ===================================================================== -->
       <!-- 1. TESSA LAUNCH ($120) -->
       <!-- ===================================================================== -->
-      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-[28px] bg-[#0D0E12]/90 backdrop-blur-xl border border-white/[0.08] hover:border-white/20 transition-all duration-300 group" id="cardProduct1" data-prod-id="1">
+      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-xl bg-white/85 backdrop-blur-xl border border-[#0F3F49]/15 hover:border-[#0F3F49]/35 transition-all duration-300 group shadow-xs" id="cardProduct1" data-prod-id="1">
         <div>
           <!-- Badge Superior -->
-          <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.08]">
-            <span class="text-[11px] font-mono text-zinc-400">NIVEL 01</span>
-            <span class="text-[10px] font-mono bg-white/[0.06] text-zinc-200 px-2.5 py-0.5 rounded-full border border-white/10 font-bold uppercase tracking-wider">
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#0F3F49]/10">
+            <span class="text-[11px] font-mono text-[#0F3F49]/60">NIVEL 01</span>
+            <span class="text-[10px] font-mono bg-[#ECE6DF] text-[#0F3F49] px-2.5 py-0.5 rounded-md border border-[#0F3F49]/15 font-bold uppercase tracking-wider">
               PAGO ÚNICO
             </span>
           </div>
 
           <!-- Título y Precio -->
-          <h3 class="text-2xl font-display font-bold text-white mb-1">Tessa Launch</h3>
-          <div class="text-xs font-mono text-zinc-400 mb-4">Catálogo Express</div>
+          <h3 class="text-2xl font-display font-light text-[#0F3F49] mb-1">Tessa Launch</h3>
+          <div class="text-xs font-mono text-[#0F3F49]/60 mb-4">Catálogo Express</div>
 
           <div class="my-4">
-            <span class="text-4xl font-display font-extrabold text-[#F4F4F0]">$120</span>
-            <span class="text-xs font-mono text-emerald-400 font-bold block mt-1">Pago Único • Hosting Gratis</span>
+            <span class="text-4xl font-display font-light text-[#0F3F49]">$120</span>
+            <span class="text-xs font-mono text-[#7F0508] font-bold block mt-1">Pago Único • Hosting Gratis</span>
           </div>
 
-          <p class="text-xs text-zinc-400 leading-relaxed mb-6 font-sans">
+          <p class="text-xs text-[#0F3F49]/75 leading-relaxed mb-6 font-sans">
             Diseño estilo Startup de alto impacto visual, optimizado para validar rápido y vender directamente sin intermediarios.
           </p>
 
+          <!-- Upsell Opcional -->
+          <div class="p-3 rounded-lg bg-[#ECE6DF]/70 border border-[#0F3F49]/10 text-xs font-mono text-[#0F3F49] mb-6">
+            <span class="text-[#7F0508] font-bold">+ Dominio .com:</span> opcional por $35
+          </div>
+
           <!-- Lista de Características -->
-          <ul class="space-y-3 text-xs font-mono text-zinc-300 border-t border-white/[0.06] pt-5 mb-8">
+          <ul class="space-y-3 text-xs font-mono text-[#0F3F49]/85 border-t border-[#0F3F49]/10 pt-5 mb-8">
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span>Diseño estilo Startup ultra moderno</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-              <span>Catálogo de productos o servicios</span>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
+              <span>Catálogo express hasta 15 productos</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span>Carrito y pedido directo a WhatsApp</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-              <span>Autogestión de inventario y precios con <strong>Google Sheets</strong></span>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
+              <span>Autogestión con <strong>Google Sheets</strong></span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span>Carga ultrarrápida en 0.4s</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-              <span>Hosting gratuito de por vida</span>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
+              <span>Hosting base gratuito de por vida</span>
             </li>
           </ul>
         </div>
 
-        <button onclick="toggleSelectProduct(1, 'Tessa Launch', 120, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-white/[0.06] hover:bg-white/[0.14] text-white font-mono text-xs uppercase tracking-wider border border-white/10 hover:border-white/25 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.01]">
+        <button onclick="toggleSelectProduct(1, 'Tessa Launch', 120, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-white hover:bg-[#0F3F49] text-[#0F3F49] hover:text-[#ECE6DF] font-sans font-bold text-xs uppercase tracking-tight border border-[#0F3F49]/20 transition-all flex items-center justify-center gap-2 shadow-xs group-hover:scale-[1.01]">
           <span>Seleccionar Plan ↗</span>
         </button>
       </div>
@@ -1058,60 +1146,60 @@
       <!-- ===================================================================== -->
       <!-- 2. TESSA CATÁLOGO PRO ($290) [DESTACADO // EL MÁS VENDIDO] -->
       <!-- ===================================================================== -->
-      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-[28px] bg-gradient-to-b from-[#0D1F17]/90 via-[#0D0E12] to-[#0D0E12] border-2 border-emerald-400/60 shadow-[0_0_35px_rgba(16,185,129,0.18)] transition-all duration-300 relative group !overflow-visible" id="cardProduct2" data-prod-id="2" style="overflow: visible;">
+      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-xl bg-[#0F3F49] text-[#ECE6DF] border-2 border-[#7F0508] shadow-[0_12px_45px_rgba(15,63,73,0.22)] transition-all duration-300 relative group !overflow-visible" id="cardProduct2" data-prod-id="2" style="overflow: visible;">
         <!-- Badge Flotante Superior Destacado -->
-        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 px-3.5 py-1 rounded-full bg-emerald-400 text-[#060609] font-mono text-[10px] font-extrabold uppercase tracking-widest shadow-[0_4px_16px_rgba(16,185,129,0.45)] whitespace-nowrap">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 px-4 py-1 rounded-full bg-[#7F0508] text-[#ECE6DF] font-mono text-[10px] font-bold uppercase tracking-widest shadow-md whitespace-nowrap">
           ★ EL MÁS VENDIDO
         </div>
 
         <div>
           <!-- Cabecera de Tarjeta -->
-          <div class="flex items-center justify-between pb-4 mb-4 border-b border-emerald-400/20 pt-1.5">
-            <span class="text-[11px] font-mono text-emerald-400 font-bold">NIVEL 02</span>
-            <span class="text-[10px] font-mono bg-emerald-400/15 text-emerald-300 px-2.5 py-0.5 rounded-full border border-emerald-400/30 font-bold uppercase tracking-wider">
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#ECE6DF]/15 pt-1.5">
+            <span class="text-[11px] font-mono text-[#ECE6DF]/70 font-bold">NIVEL 02</span>
+            <span class="text-[10px] font-mono bg-[#ECE6DF]/15 text-[#ECE6DF] px-2.5 py-0.5 rounded-md border border-[#ECE6DF]/20 font-bold uppercase tracking-wider">
               FAVORITO COMERCIOS
             </span>
           </div>
 
           <!-- Título y Precio -->
-          <h3 class="text-2xl font-display font-light text-white mb-1">Tessa Catálogo Pro</h3>
-          <div class="text-xs font-mono text-emerald-400 mb-4">E-Commerce WhatsApp & BCV</div>
+          <h3 class="text-2xl font-display font-light text-[#ECE6DF] mb-1">Tessa Catálogo Pro</h3>
+          <div class="text-xs font-mono text-[#ECE6DF]/80 mb-4">E-Commerce WhatsApp & BCV</div>
 
           <div class="my-4">
-            <span class="text-4xl font-display font-extrabold text-[#F4F4F0]">$290</span>
-            <span class="text-xs font-mono text-emerald-400 font-bold block mt-1">Pago Único • Dominio .com Incluido</span>
+            <span class="text-4xl font-display font-light text-[#ECE6DF]">$290</span>
+            <span class="text-xs font-mono text-[#ECE6DF]/90 font-bold block mt-1">Pago Único • Dominio .com Incluido</span>
           </div>
 
-          <p class="text-xs text-zinc-300 leading-relaxed mb-6 font-sans">
+          <p class="text-xs text-[#ECE6DF]/80 leading-relaxed mb-6 font-sans">
             El motor de pedidos autónomo más eficiente: el cliente arma su orden con tasa al día y te envía el pedido estructurado listo para cobrar.
           </p>
 
           <!-- Lista de Características -->
-          <ul class="space-y-3 text-xs font-mono text-zinc-200 border-t border-emerald-400/20 pt-5 mb-8">
+          <ul class="space-y-3 text-xs font-mono text-[#ECE6DF] border-t border-[#ECE6DF]/15 pt-5 mb-8">
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
               <span><strong>Dominio .com propio</strong> y certificado SSL incluido</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-              <span>Carrito interactivo con selección de tallas y/o variantes</span>
+              <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
+              <span>Carrito interactivo con selección de tallas y variantes</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
               <span>Cálculo automático en $ y Bs con <strong>Tasa BCV Automática</strong></span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
               <span>Módulo para comprobantes (Pago Móvil, Zelle y Binance)</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#ECE6DF] shrink-0 mt-0.5"></i>
               <span>Autogestión de inventario y precios con <strong>Google Sheets</strong></span>
             </li>
           </ul>
         </div>
 
-        <button onclick="toggleSelectProduct(2, 'Tessa Catálogo Pro', 290, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-[#060609] font-sans font-bold text-xs uppercase tracking-tight transition-all flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:scale-[1.02]">
+        <button onclick="toggleSelectProduct(2, 'Tessa Catálogo Pro', 290, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-[#7F0508] hover:bg-[#9E0A0E] text-[#ECE6DF] font-sans font-bold text-xs uppercase tracking-tight transition-all flex items-center justify-center gap-2 shadow-md hover:scale-[1.02]">
           <span>Seleccionar Plan ↗</span>
         </button>
       </div>
@@ -1119,59 +1207,59 @@
       <!-- ===================================================================== -->
       <!-- 3. TESSA CORPORATE ($850) [TRANQUILIDAD TOTAL] -->
       <!-- ===================================================================== -->
-      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-[28px] bg-[#0D0E12]/90 backdrop-blur-xl border border-white/[0.08] hover:border-cyan-400/40 transition-all duration-300 group" id="cardProduct3" data-prod-id="3">
+      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-xl bg-white/85 backdrop-blur-xl border border-[#0F3F49]/15 hover:border-[#0F3F49]/35 transition-all duration-300 group shadow-xs" id="cardProduct3" data-prod-id="3">
         <div>
           <!-- Badge Superior -->
-          <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.08]">
-            <span class="text-[11px] font-mono text-zinc-400">NIVEL 03</span>
-            <span class="text-[10px] font-mono bg-cyan-500/10 text-cyan-300 px-2.5 py-0.5 rounded-full border border-cyan-500/20 font-bold uppercase tracking-wider">
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#0F3F49]/10">
+            <span class="text-[11px] font-mono text-[#0F3F49]/60">NIVEL 03</span>
+            <span class="text-[10px] font-mono bg-[#ECE6DF] text-[#0F3F49] px-2.5 py-0.5 rounded-md border border-[#0F3F49]/15 font-bold uppercase tracking-wider">
               TRANQUILIDAD TOTAL
             </span>
           </div>
 
           <!-- Título y Precio -->
-          <h3 class="text-2xl font-display font-bold text-white mb-1">Tessa Corporate</h3>
-          <div class="text-xs font-mono text-cyan-300 mb-4">Web Corporativa de Alto Impacto</div>
+          <h3 class="text-2xl font-display font-light text-[#0F3F49] mb-1">Tessa Corporate</h3>
+          <div class="text-xs font-mono text-[#0F3F49]/60 mb-4">Web Corporativa Profesional</div>
 
           <div class="my-4">
-            <span class="text-4xl font-display font-extrabold text-[#F4F4F0]">$850</span>
-            <span class="text-xs font-mono text-cyan-300 font-bold block mt-1">Pago Único • Infraestructura Blindada</span>
+            <span class="text-4xl font-display font-light text-[#0F3F49]">$850</span>
+            <span class="text-xs font-mono text-[#0F3F49]/80 font-bold block mt-1">Pago Único • Infraestructura Blindada</span>
           </div>
 
-          <p class="text-xs text-zinc-400 leading-relaxed mb-6 font-sans">
+          <p class="text-xs text-[#0F3F49]/75 leading-relaxed mb-6 font-sans">
             Presencia institucional de primer nivel para empresas consolidadas que buscan máxima autoridad y cero preocupaciones técnicas.
           </p>
 
           <!-- Diferencial Clave Resaltado -->
-          <div class="p-3.5 bg-cyan-950/20 rounded-2xl border border-cyan-500/30 mb-6">
-            <div class="flex items-start gap-2.5 text-xs font-mono text-cyan-200">
-              <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+          <div class="p-3.5 bg-[#ECE6DF]/80 rounded-lg border border-[#0F3F49]/15 mb-6 text-xs font-mono text-[#0F3F49]">
+            <div class="flex items-start gap-2.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
               <span><strong>Diferencial Clave:</strong> Incluye <strong>3 años</strong> de servidor dedicado, dominio .com y ciberseguridad avanzada ya pagados.</span>
             </div>
           </div>
 
           <!-- Lista de Características -->
-          <ul class="space-y-3 text-xs font-mono text-zinc-300 border-t border-white/[0.06] pt-5 mb-8">
+          <ul class="space-y-3 text-xs font-mono text-[#0F3F49]/85 border-t border-[#0F3F49]/10 pt-5 mb-8">
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span>Plataforma corporativa multipágina</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span>Animaciones fluidas y microinteracciones a 60fps</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span>Optimización SEO local indexada en Google</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span>Correos corporativos y respaldo continuo</span>
             </li>
           </ul>
         </div>
 
-        <button onclick="toggleSelectProduct(3, 'Tessa Corporate', 850, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-white/[0.06] hover:bg-cyan-500/20 text-white hover:text-cyan-200 font-mono text-xs uppercase tracking-wider border border-white/10 hover:border-cyan-500/40 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.01]">
+        <button onclick="toggleSelectProduct(3, 'Tessa Corporate', 850, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-white hover:bg-[#0F3F49] text-[#0F3F49] hover:text-[#ECE6DF] font-sans font-bold text-xs uppercase tracking-tight border border-[#0F3F49]/20 transition-all flex items-center justify-center gap-2 shadow-xs group-hover:scale-[1.01]">
           <span>Seleccionar Plan ↗</span>
         </button>
       </div>
@@ -1179,59 +1267,59 @@
       <!-- ===================================================================== -->
       <!-- 4. TESSA CORPORATE + CHATBOT IA ($1.000) [AUTOMATIZACIÓN FULL] -->
       <!-- ===================================================================== -->
-      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-[28px] bg-gradient-to-b from-[#191122]/90 via-[#0D0E12] to-[#0D0E12] border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 group shadow-[0_0_30px_rgba(168,85,247,0.12)]" id="cardProduct4" data-prod-id="4">
+      <div class="catalog-card bento-spotlight p-7 flex flex-col justify-between rounded-xl bg-white/85 backdrop-blur-xl border border-[#0F3F49]/15 hover:border-[#0F3F49]/35 transition-all duration-300 group shadow-xs" id="cardProduct4" data-prod-id="4">
         <div>
           <!-- Badge Superior -->
-          <div class="flex items-center justify-between pb-4 mb-4 border-b border-purple-500/20">
-            <span class="text-[11px] font-mono text-purple-400 font-bold">NIVEL 04 — ELITE</span>
-            <span class="text-[10px] font-mono bg-purple-500/15 text-purple-300 px-2.5 py-0.5 rounded-full border border-purple-500/30 font-bold uppercase tracking-wider">
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#0F3F49]/10">
+            <span class="text-[11px] font-mono text-[#0F3F49]/60">NIVEL 04 — ELITE</span>
+            <span class="text-[10px] font-mono bg-[#7F0508]/10 text-[#7F0508] px-2.5 py-0.5 rounded-md border border-[#7F0508]/20 font-bold uppercase tracking-wider">
               AUTOMATIZACIÓN FULL
             </span>
           </div>
 
           <!-- Título y Precio -->
-          <h3 class="text-2xl font-display font-light text-white mb-1">Corporate + IA</h3>
-          <div class="text-xs font-mono text-purple-300 mb-4">Plataforma Web + Agente Autónomo 24/7</div>
+          <h3 class="text-2xl font-display font-light text-[#0F3F49] mb-1">Corporate + IA</h3>
+          <div class="text-xs font-mono text-[#0F3F49]/60 mb-4">Plataforma Web + Agente Autónomo 24/7</div>
 
           <div class="my-4">
-            <span class="text-4xl font-display font-extrabold text-[#F4F4F0]">$1.000</span>
-            <span class="text-xs font-mono text-purple-300 font-bold block mt-1">Pago Único • Ecosistema Completo</span>
+            <span class="text-4xl font-display font-light text-[#0F3F49]">$1.000</span>
+            <span class="text-xs font-mono text-[#7F0508] font-bold block mt-1">Pago Único • Ecosistema Completo</span>
           </div>
 
-          <p class="text-xs text-zinc-300 leading-relaxed mb-6 font-sans">
+          <p class="text-xs text-[#0F3F49]/75 leading-relaxed mb-6 font-sans">
             La solución definitiva de transformación digital: une la autoridad de tu plataforma corporativa con atención y conversión automatizada con IA.
           </p>
 
           <!-- Badge Destacado Chatbot -->
-          <div class="p-3.5 bg-purple-950/30 rounded-2xl border border-purple-500/30 mb-6">
-            <div class="flex items-start gap-2.5 text-xs font-mono text-purple-200">
-              <i data-lucide="bot" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+          <div class="p-3.5 bg-[#ECE6DF]/80 rounded-lg border border-[#0F3F49]/15 mb-6 text-xs font-mono text-[#0F3F49]">
+            <div class="flex items-start gap-2.5">
+              <i data-lucide="bot" class="w-4 h-4 text-[#7F0508] shrink-0 mt-0.5"></i>
               <span><strong>Chatbot Interactivo IA:</strong> Entrenado a medida con los datos, catálogos y políticas de tu empresa para atención al cliente 24/7.</span>
             </div>
           </div>
 
           <!-- Lista de Características -->
-          <ul class="space-y-3 text-xs font-mono text-zinc-300 border-t border-purple-500/20 pt-5 mb-8">
+          <ul class="space-y-3 text-xs font-mono text-[#0F3F49]/85 border-t border-[#0F3F49]/10 pt-5 mb-8">
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span><strong>Todo lo incluido en el plan Corporate</strong></span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span><strong>3 años</strong> de servidor dedicado, dominio .com y ciberseguridad</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span>Chatbot interactivo 24/7 integrado</span>
             </li>
             <li class="flex items-start gap-2.5">
-              <i data-lucide="check" class="w-4 h-4 text-purple-400 shrink-0 mt-0.5"></i>
+              <i data-lucide="check" class="w-4 h-4 text-[#0F3F49] shrink-0 mt-0.5"></i>
               <span>Atención continua y calificación de clientes potenciales</span>
             </li>
           </ul>
         </div>
 
-        <button onclick="toggleSelectProduct(4, 'Tessa Corporate + Chatbot IA', 1000, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-purple-500/20 hover:bg-purple-500/30 text-purple-200 font-mono text-xs uppercase tracking-wider border border-purple-500/40 hover:border-purple-400 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.01] shadow-[0_0_20px_rgba(168,85,247,0.2)]">
+        <button onclick="toggleSelectProduct(4, 'Tessa Corporate + Chatbot IA', 1000, 0)" class="btn-toggle-product w-full py-3.5 rounded-full bg-white hover:bg-[#0F3F49] text-[#0F3F49] hover:text-[#ECE6DF] font-sans font-bold text-xs uppercase tracking-tight border border-[#0F3F49]/20 transition-all flex items-center justify-center gap-2 shadow-xs group-hover:scale-[1.01]">
           <span>Seleccionar Plan ↗</span>
         </button>
       </div>
@@ -1240,16 +1328,16 @@
 
     <!-- Controles de Carrusel Móvil (Sec 3) -->
     <div class="flex md:hidden items-center justify-between mt-4 px-2 select-none">
-      <div class="flex items-center gap-1.5 font-mono text-[11px] text-zinc-400">
-        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <div class="flex items-center gap-1.5 font-mono text-[11px] text-[#0F3F49]/70">
+        <span class="inline-block w-2 h-2 rounded-full bg-[#7F0508] animate-pulse"></span>
         <span id="label-sec3">1 de 4</span>
       </div>
       <div class="flex items-center gap-1.5" id="dots-sec3"></div>
       <div class="flex items-center gap-2">
-        <button type="button" onclick="scrollCarousel('mobile-carousel-sec3', -1)" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white shadow-sm active:scale-95 transition-all" aria-label="Anterior">
+        <button type="button" onclick="scrollCarousel('mobile-carousel-sec3', -1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Anterior">
           <i data-lucide="chevron-left" class="w-4 h-4"></i>
         </button>
-        <button type="button" onclick="scrollCarousel('mobile-carousel-sec3', 1)" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 border border-white/15 flex items-center justify-center text-white shadow-sm active:scale-95 transition-all" aria-label="Siguiente">
+        <button type="button" onclick="scrollCarousel('mobile-carousel-sec3', 1)" class="w-8 h-8 rounded-full bg-white/90 hover:bg-white border border-[#0F3F49]/15 flex items-center justify-center text-[#0F3F49] shadow-sm active:scale-95 transition-all" aria-label="Siguiente">
           <i data-lucide="chevron-right" class="w-4 h-4"></i>
         </button>
       </div>
@@ -1260,7 +1348,7 @@
   <!-- ========================================================================= -->
   <!-- 4. DYNAMIC STICKY DRAWER: "ARMAR COTIZACIÓN PARA WHATSAPP" -->
   <!-- ========================================================================= -->
-  <aside id="cotizadorBar" class="fixed bottom-4 sm:bottom-6 inset-x-0 z-40 flex justify-center px-4 pointer-events-none">
+  <aside id="cotizadorBar" class="fixed bottom-4 sm:bottom-6 inset-x-0 z-40 hidden justify-center px-4 pointer-events-none transition-all duration-300">
     <div class="pointer-events-auto w-full max-w-4xl bg-[#0F3F49]/95 backdrop-blur-2xl border border-[#0F3F49]/30 rounded-3xl sm:rounded-full px-5 sm:px-8 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-[0_15px_50px_rgba(15,63,73,0.35)] transition-all">
       
       <!-- Selection Summary -->
@@ -1367,12 +1455,6 @@
     </div>
   </div>
 
-  <!-- Gear Trigger Button -->
-  <button onclick="document.getElementById('phoneConfigModal').classList.remove('hidden'); document.getElementById('phoneConfigModal').classList.add('flex');" class="fixed bottom-20 sm:bottom-6 left-6 z-30 px-3.5 py-2 rounded-full bg-white/90 hover:bg-[#0F3F49] border border-[#0F3F49]/20 hover:border-[#0F3F49] text-[#0F3F49] hover:text-[#ECE6DF] shadow-xl backdrop-blur-md transition-all flex items-center gap-2 text-xs font-mono group" title="Configurar número receptor de WhatsApp">
-    <i data-lucide="settings" class="w-3.5 h-3.5 group-hover:rotate-90 transition-transform duration-500"></i>
-    <span class="hidden sm:inline">Vincular tu WhatsApp</span>
-  </button>
-
   <!-- ========================================================================= -->
   <!-- 5. FOOTER -->
   <!-- ========================================================================= -->
@@ -1390,10 +1472,10 @@
 
       <!-- Links -->
       <div class="flex items-center gap-6">
-        <a href="#comparativa" class="hover:text-white transition-colors">Comparativa</a>
+        <a href="#comparativa" class="hover:text-white transition-colors">Arquitectura</a>
         <a href="#creaciones" class="hover:text-white transition-colors">Creaciones</a>
-        <a href="#catalogo" class="hover:text-white transition-colors">Catálogo</a>
         <a href="#ia" class="hover:text-white transition-colors">Sistemas IA</a>
+        <a href="#catalogo" class="hover:text-white transition-colors">Catálogo</a>
       </div>
 
       <!-- Status Indicator -->
@@ -1753,7 +1835,7 @@
       if (selectedProducts[prodId]) {
         delete selectedProducts[prodId];
         card.classList.remove('is-selected');
-        btn.innerHTML = `<i data-lucide="plus" class="w-3.5 h-3.5"></i><span>Agregar a mi cotización</span>`;
+        btn.innerHTML = `<i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i><span>Seleccionar Plan ↗</span>`;
       } else {
         selectedProducts[prodId] = {
           id: prodId,
@@ -1762,9 +1844,9 @@
           monthlyPrice: monthlyPrice
         };
         card.classList.add('is-selected');
-        const isEliteCard = prodId === 5;
-        const accentClass = isEliteCard ? 'text-[#0F3F49] font-bold' : (btn.classList.contains('magnetic-primary') ? 'text-[#ECE6DF] font-bold' : 'text-[#7F0508] font-bold');
-        btn.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 ${accentClass}"></i><span class="${accentClass}">✓ Seleccionado</span>`;
+        const isDarkCard = prodId === 2;
+        const accentClass = isDarkCard ? 'text-[#ECE6DF] font-bold' : 'text-[#7F0508] font-bold';
+        btn.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 ${accentClass}"></i><span class="${accentClass}">Seleccionado</span>`;
       }
       lucide.createIcons();
       updateQuoterUI();
@@ -1793,7 +1875,7 @@
         if (card) {
           card.classList.remove('is-selected');
           const btn = card.querySelector('.btn-toggle-product');
-          if (btn) btn.innerHTML = `<i data-lucide="plus" class="w-3.5 h-3.5"></i><span>Agregar a mi cotización</span>`;
+          if (btn) btn.innerHTML = `<i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i><span>Seleccionar Plan ↗</span>`;
         }
       });
 
@@ -1830,6 +1912,18 @@
       });
 
       const count = itemsList.length;
+
+      // Show/Hide Floating Cotizador Bar (Only visible when at least 1 item is selected)
+      const cotizadorBar = document.getElementById('cotizadorBar');
+      if (cotizadorBar) {
+        if (count > 0) {
+          cotizadorBar.classList.remove('hidden');
+          cotizadorBar.classList.add('flex');
+        } else {
+          cotizadorBar.classList.add('hidden');
+          cotizadorBar.classList.remove('flex');
+        }
+      }
 
       // Update Floating Bar
       const countEl = document.getElementById('barItemCount');
@@ -2037,9 +2131,7 @@
     updateQuoterUI();
 
     // Inicializar carruseles móviles interactivos
-    initMobileCarousel('mobile-carousel-sec1', 'dots-sec1', 'label-sec1', 'light');
-    initMobileCarousel('mobile-carousel-sec2', 'dots-sec2', 'label-sec2', 'light');
-    initMobileCarousel('mobile-carousel-sec3', 'dots-sec3', 'label-sec3', 'dark');
+    initMobileCarousel('mobile-carousel-sec3', 'dots-sec3', 'label-sec3', 'light');
     if (typeof lucide !== 'undefined' && lucide.createIcons) {
       lucide.createIcons();
     }
